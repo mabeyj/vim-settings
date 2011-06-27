@@ -1,0 +1,24 @@
+[submodule "submodules/pathogen"]
+	path = submodules/pathogen
+	url = git://github.com/tpope/vim-pathogen.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/indent-guides"]
+	path = .vim/bundle/indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
+[submodule ".vim/bundle/sparkup"]
+	path = .vim/bundle/sparkup
+	url = git://github.com/sirshannon/sparkup.vim.git
+[submodule "submodules/sunburst"]
+	path = submodules/sunburst
+	url = https://github.com/gigamo/sunburst.vim.git
+[submodule ".vim/bundle/snipmate"]
+	path = .vim/bundle/snipmate
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule ".vim/bundle/addon-mw-utils"]
+	path = .vim/bundle/addon-mw-utils
+	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
