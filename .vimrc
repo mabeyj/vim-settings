@@ -39,8 +39,8 @@ set guioptions-=T
 set guiheadroom=0
 
 " kj triggers ESC
-inoremap jk <Esc>
-inoremap kj <Esc>
+call arpeggio#load()
+Arpeggio inoremap jk <Esc>
 
 " Trim trailing spaces for certain filetypes
 fun! <SID>StripTrailingWhitespaces()
