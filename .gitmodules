@@ -12,7 +12,7 @@
 	url = git://github.com/majutsushi/tagbar.git
 [submodule ".vim/bundle/sparkup"]
 	path = .vim/bundle/sparkup
-	url = git://github.com/sirshannon/sparkup.vim.git
+	url = git://github.com/shannonmoeller/sparkup.vim.git
 [submodule "submodules/sunburst"]
 	path = submodules/sunburst
 	url = https://github.com/gigamo/sunburst.vim.git
