@@ -82,3 +82,6 @@ let NERDTreeMouseMode=2
 
 " Sparkup
 let g:sparkupNextMapping='<c-x>'
+
+" Snipmate
+let g:snipMate={'scope_aliases': {'php': 'php'}}
