@@ -79,3 +79,6 @@ let g:tagbar_autofocus=1
 
 " NERDTree
 let NERDTreeMouseMode=2
+
+" Sparkup
+let g:sparkupNextMapping='<c-x>'
