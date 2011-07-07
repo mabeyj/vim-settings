@@ -20,6 +20,9 @@ set pastetoggle=<F2>
 nnoremap <silent> <F9> :TagbarToggle<CR>
 map <F12> :NERDTreeToggle<CR>
 
+map <Leader>a :NERDTreeToggle<CR>
+nnoremap <Leader>s :TagbarToggle<CR>
+
 " Write with sudo
 cmap w!! w !sudo tee % >/dev/null
 
