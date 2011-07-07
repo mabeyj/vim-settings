@@ -8,11 +8,36 @@ snippet ??
 	?>
 snippet i?
 	<?php ${1} ?>
-# Brackets
+# Value keywords
+snippet F
+	FALSE
+snippet T
+	TRUE
+snippet N
+	NULL
+# Brackets/braces
+snippet ss
+	[${1}]
+snippet ssj
+	[${1}];
+snippet dd
+	{${1}}
 snippet ff
 	{
 		${1}	
 	}
+snippet kk
+	(${1})
+snippet kkf
+	(${1});
+snippet jj
+	(
+		${1}
+	)
+snippet jjf
+	(
+		${1}
+	);
 # Comments
 snippet d
 	/**
@@ -43,16 +68,22 @@ snippet iec
 snippet 3
 	${1:/* condition */} ? ${2:/* if true */} : ${3:/* if false */}
 snippet 33
-	${1 :/* condition */}
+	${1:/* condition */}
 		? ${2:/* if true */}
 		: ${3:/* if false */}
 # Arrays
 snippet a
 	array(${1})${2}
+snippet aj
+	array(${1});
 snippet aa
 	array( 
 		${1}
 	)
+snippet aaj
+	array(
+		${1}
+	);
 snippet k
 	'${1:key}' => ${2},${3}
 # Superglobals
@@ -225,4 +256,3 @@ snippet vd
 	 * @category  ${2}
 	 * @author    Velsoft Training Materials, Inc.
 	 */
-
