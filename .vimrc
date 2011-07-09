@@ -63,6 +63,9 @@ au FileType php set omnifunc=phpcomplete#CompletePHP
 au FileType php set comments=s:/*,mb:\ *,ex:*/
 au FileType javascript set comments=s:/*,mb:\ *,ex:*/
 
+vnoremap <Leader>k V:AlignCtrl p1P1<CR>:'<,'>Align =><CR>
+vnoremap <Leader>d :s/\s\s\+/  /g<CR>:AlignCtrl p0P0\|<CR>:'<,'>Align \s\s<CR>
+
 " Colour scheme
 color sunburst
 set background=dark
