@@ -1,77 +1,72 @@
-call pathogen#runtime_append_all_bundles() 
+" Initialize Pathogen
+call pathogen#infect()
+Helptags
 
-set number
-set showcmd
-set mouse=a
-set history=1000
-set undolevels=1000
-set hidden
-set incsearch
-set showtabline=2
+" Basic Vim settings
+set incsearch mouse=a number showcmd
+set autoindent tabstop=4 shiftwidth=4
+set scrolloff=3                 " Give more context when scrolling
+set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
+set colorcolumn=81              " Highlight long lines
 
-set scrolloff=3            " Give more context when scrolling
-set wildmode=list:longest  " Make commands/files autocomplete like Bash
-
-" Show date/time in ruler
-set rulerformat=%55(%{strftime('%a\ %F\ %I:%M:%S\ %p')}\ \ L%5l/%5L\ \ C%7(%c%V%)\ \ %P%)
-
-" Function keys
-set pastetoggle=<F2>
-nnoremap <silent> <F9> :TagbarToggle<CR>
-map <F12> :NERDTreeToggle<CR>
-
-map <Leader>a :NERDTreeToggle<CR>
-nnoremap <Leader>s :TagbarToggle<CR>
-
-" Write with sudo
-cmap w!! w !sudo tee % >/dev/null
-
-" Indentation
-set autoindent
-set tabstop=4
-set shiftwidth=4
-
-" Highlight long lines
-set colorcolumn=81
-hi ColorColumn ctermbg=233
-
-" GUI
-set guifont=Monospace\ 9
-set guioptions-=m
-set guioptions-=T
-set guiheadroom=0
-
-" kj triggers ESC
-call arpeggio#load()
-Arpeggio inoremap jk <Esc>
-
-" Trim trailing spaces for certain filetypes
-fun! <SID>StripTrailingWhitespaces()
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    call cursor(l, c)
-endfun
-
-autocmd BufWritePre *.php,*.css,*.html,*.js :call <SID>StripTrailingWhitespaces()
-
-" Filetype-specific settings
-filetype plugin indent on
-au FileType php set omnifunc=phpcomplete#CompletePHP
-
-" Only continue comment structure after pressing <Enter> for doc comments
-au FileType php set comments=s:/*,mb:\ *,ex:*/
-au FileType javascript set comments=s:/*,mb:\ *,ex:*/
-
-vnoremap <Leader>k V:AlignCtrl p1P1<CR>:'<,'>Align =><CR>
-vnoremap <Leader>d :s/\s\s\+/  /g<CR>:AlignCtrl p0P0\|<CR>:'<,'>Align \s\s<CR>
+set statusline=%f\ %m%h%r%w\ %y\ %{fugitive#statusline()}
+set rulerformat=%30(L%5l/%5L\ \ C%7(%c%V%)\ \ %P%)
 
 " Colour scheme
-color sunburst
 set background=dark
+color sunburst
 hi Normal ctermbg=none
 hi NonText ctermbg=none
 
+" Trim trailing spaces for certain filetypes
+function! <SID>TrimTrailingWhitespace()
+	let l = line(".")
+	let c = col(".")
+	%s/\s\+$//e
+	call cursor(l, c)
+endfunction
+
+autocmd BufWritePre *.php,*.css,*.html,*.js :call <SID>TrimTrailingWhitespace()
+
+" Mappings
+" ------------------------------------------------------------------------------
+set pastetoggle=<Leader>p
+
+noremap  <Leader>f :NERDTreeToggle<CR>
+nnoremap <Leader>d :TagbarToggle<CR>
+
+" Align PHP key => value
+vnoremap <Leader>k V:AlignCtrl p1P1<CR>:'<,'>Align =><CR>
+
+" Align doc comment @param descriptions
+vnoremap <Leader>j :s/  \+/  /g<CR>:AlignCtrl p0P0\|<CR>:'<,'>Align "  "<CR>
+
+" Fix indentation of doc comments
+nnoremap <Leader>c ?\/\*\*<CR>V/\*\/<CR>=``
+
+" Write with sudo
+cnoremap w!! w !sudo tee % >/dev/null
+
+" Hit jk at same time to trigger Esc
+call arpeggio#load()
+Arpeggio inoremap jk <Esc>
+" ------------------------------------------------------------------------------
+
+" Filetype-specific settings
+" ------------------------------------------------------------------------------
+filetype plugin on
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
+" Only continue doc comment structures
+autocmd FileType php        set comments=s:/*,mb:\ *,ex:*/
+autocmd FileType javascript set comments=s:/*,mb:\ *,ex:*/
+
+" Show cached diff when committing with Git
+autocmd FileType gitcommit DiffGitCached | wincmd L
+" ------------------------------------------------------------------------------
+
+" Plugin settings
+" ------------------------------------------------------------------------------
 " Indent guides
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
@@ -82,12 +77,14 @@ hi IndentGuidesEven ctermbg=233
 
 " Tagbar
 let g:tagbar_autofocus=1
+let g:tagbar_autoclose=1
 
 " NERDTree
 let NERDTreeMouseMode=2
 
 " Sparkup
-let g:sparkupNextMapping='<c-x>'
+let g:sparkupNextMapping='<c-x>'     " Prevent conflict with Vim's autocomplete
 
 " Snipmate
-let g:snipMate={'scope_aliases': {'php': 'php'}}
+let g:snipMate={'scope_aliases': {'php': 'php'}}  " Don't mix other snippets with PHP
+" ------------------------------------------------------------------------------
