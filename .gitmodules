@@ -34,6 +34,9 @@
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule ".vim/bundle/matchit"]
+	path = .vim/bundle/matchit
+	url = git://github.com/edsono/vim-matchit.git
 [submodule "submodules/tomorrow"]
 	path = submodules/tomorrow
 	url = git://github.com/ChrisKempson/Tomorrow-Theme.git
