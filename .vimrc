@@ -5,6 +5,7 @@ Helptags
 " Basic Vim settings
 set incsearch mouse=a number showcmd
 set autoindent tabstop=4 shiftwidth=4
+set formatoptions+=12cnoqr
 set scrolloff=3                 " Give more context when scrolling
 set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
 set colorcolumn=81              " Highlight long lines
