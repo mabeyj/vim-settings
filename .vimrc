@@ -87,7 +87,7 @@ let g:tagbar_autoclose=1
 let NERDTreeMouseMode=2
 
 " Sparkup
-let g:sparkupNextMapping='<c-x>'     " Prevent conflict with Vim's autocomplete
+let g:sparkupNextMapping='<C-B>'     " Prevent conflict with Vim's autocomplete
 
 " Snipmate
 let g:snipMate={'scope_aliases': {'php': 'php'}}  " Don't mix other snippets with PHP
