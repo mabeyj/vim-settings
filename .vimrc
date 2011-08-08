@@ -29,30 +29,6 @@ endfunction
 
 autocmd BufWritePre *.php,*.css,*.html,*.js :call <SID>TrimTrailingWhitespace()
 
-" Mappings
-" ------------------------------------------------------------------------------
-set pastetoggle=<Leader>p
-
-noremap  <Leader>f :NERDTreeToggle<CR>
-nnoremap <Leader>d :TagbarToggle<CR>
-
-" Align PHP key => value
-vnoremap <Leader>k V:AlignCtrl p1P1<CR>:'<,'>Align =><CR>
-
-" Align doc comment @param descriptions
-vnoremap <Leader>j :s/  \+/  /g<CR>:AlignCtrl p0P0\|<CR>:'<,'>Align "  "<CR>
-
-" Fix indentation of doc comments
-nnoremap <Leader>c ?\/\*\*<CR>V/\*\/<CR>=``
-
-" Write with sudo
-cnoremap w!! w !sudo tee % >/dev/null
-
-" Hit jk at same time to trigger Esc
-call arpeggio#load()
-Arpeggio inoremap jk <Esc>
-" ------------------------------------------------------------------------------
-
 " Filetype-specific settings
 " ------------------------------------------------------------------------------
 filetype plugin on
@@ -64,6 +40,33 @@ autocmd FileType javascript set comments=s:/*,mb:\ *,ex:*/
 
 " Show cached diff when committing with Git
 autocmd FileType gitcommit DiffGitCached | wincmd L
+" ------------------------------------------------------------------------------
+
+" Mappings
+" ------------------------------------------------------------------------------
+set pastetoggle=<Leader>p
+
+noremap  <Leader>f :NERDTreeToggle<CR>
+nnoremap <Leader>d :TagbarToggle<CR>
+
+" Align key/value pairs -- would like to avoid using a mark, but Align acts
+" weird when used in a function
+autocmd FileType php        nnoremap <Leader>k mZ:AlignCtrl lp1P1:<CR>[(jV])k:Align =><CR>`Z
+autocmd FileType php        vnoremap <Leader>k <Esc>:AlignCtrl lp1P1:<CR>:Align =><CR>
+autocmd FileType javascript vnoremap <Leader>k <Esc>:AlignCtrl l<p0P0:<CR>:'<,'>Align " "<CR>
+
+" Align doc comment @param descriptions
+vnoremap <Leader>j :s/  \+/  /g<CR>:AlignCtrl lp0P0:<CR>:'<,'>Align "  "<CR>
+
+" Fix indentation of doc comments
+nnoremap <Leader>c ?\/\*\*<CR>V/\*\/<CR>=``
+
+" Write with sudo
+cnoremap w!! w !sudo tee % > /dev/null
+
+" Hit jk at same time to trigger Esc
+call arpeggio#load()
+Arpeggio inoremap jk <Esc>
 " ------------------------------------------------------------------------------
 
 " Plugin settings
