@@ -47,7 +47,8 @@ autocmd FileType gitcommit DiffGitCached | wincmd L
 " ------------------------------------------------------------------------------
 set pastetoggle=<Leader>p
 
-noremap  <Leader>f :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeToggle<CR>
+nnoremap <Leader>F :NERDTreeMirror<CR>
 nnoremap <Leader>d :TagbarToggle<CR>
 
 " Align key/value pairs -- would like to avoid using a mark, but Align acts
