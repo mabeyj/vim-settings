@@ -37,3 +37,6 @@
 [submodule "submodules/tomorrow"]
 	path = submodules/tomorrow
 	url = git://github.com/ChrisKempson/Tomorrow-Theme.git
+[submodule ".vim/bundle/vimwiki"]
+	path = .vim/bundle/vimwiki
+	url = git://github.com/vim-scripts/vimwiki.git
