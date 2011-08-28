@@ -1,0 +1,113 @@
+# Shared snippets for all C-like languages
+
+# Comments
+snippet d "Doc comment" b
+/**
+ * $1
+ */
+endsnippet
+
+snippet "* s" "@see documentation" b
+* @see ${1:element/function()/$variable}
+endsnippet
+
+snippet "* si" "@since documentation" b
+* @since ${1:version}
+endsnippet
+
+# Brackets/braces
+snippet ss "Brackets" i
+[$1]
+endsnippet
+
+snippet dd "Curly braces"
+{$1}
+endsnippet
+
+snippet ff "Curly brace block"
+{
+	$1	
+}
+endsnippet
+
+snippet kk "Parentheses" i
+($1)
+endsnippet
+
+snippet jj "Parentheses block" i
+(
+	$1
+)
+endsnippet
+
+# Operators
+snippet 3 "Ternary operator"
+${1:/* condition */} ? ${2:/* if true*/} : ${3:/* if false */}
+endsnippet
+
+snippet 33 "Multi-line ternary operator"
+${1:/* condition */}
+	? ${2:/* if true */}
+	: ${3:/* if false */}
+endsnippet
+
+# Functions
+snippet afn "Anonymous function declaration"
+function($1)
+{
+	$2
+}
+endsnippet
+
+# Control flow
+snippet b "Break" b
+break;
+endsnippet
+
+snippet co "Continue" b
+continue;
+endsnippet
+
+snippet r "Return" b
+return $1;
+endsnippet
+
+# If-else blocks
+snippet i "If block" b
+if (${1:/* condition */})
+{
+	$2
+}
+endsnippet
+
+snippet i1 "Single-line if block" b
+if (${1:/* condition */})
+	$0
+endsnippet
+
+snippet e "Else block" b
+else
+{
+	$1
+}
+endsnippet
+
+snippet e1 "Single-line else block" b
+else
+	$0
+endsnippet
+
+# Loops
+snippet do "Do-while loop" b
+do
+{
+	$2
+} while (${1:/* condition */});
+endsnippet
+
+snippet w "While loop" b
+while (${1:/* condition */})
+{
+	$2
+}
+endsnippet
