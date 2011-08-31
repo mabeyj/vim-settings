@@ -11,8 +11,8 @@ set scrolloff=3                 " Give more context when scrolling
 set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
 set colorcolumn=81              " Highlight long lines
 
-set statusline=%f\ %m%h%r%w\ %y\ %{fugitive#statusline()}%=L%5l/%5L\ \ C%7(%c%V%)\ \ %P
-set rulerformat=%30(L%5l/%5L\ \ C%7(%c%V%)\ \ %P%)
+set statusline=%f\ %m%h%r%w\ %y\ %{fugitive#statusline()}%=B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P
+set rulerformat=%45(%=B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P%)
 
 " Gvim options
 set guifont=Monospace\ 9
