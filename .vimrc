@@ -11,7 +11,7 @@ set scrolloff=3                 " Give more context when scrolling
 set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
 set colorcolumn=81              " Highlight long lines
 
-set statusline=%f\ %m%h%r%w\ %y\ %{fugitive#statusline()}
+set statusline=%f\ %m%h%r%w\ %y\ %{fugitive#statusline()}%=L%5l/%5L\ \ C%7(%c%V%)\ \ %P
 set rulerformat=%30(L%5l/%5L\ \ C%7(%c%V%)\ \ %P%)
 
 " Colour scheme
