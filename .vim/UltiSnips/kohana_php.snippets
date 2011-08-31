@@ -1,0 +1,32 @@
+# Kohana-specific snippets
+snippet k? "Kohana PHP tag" b
+<?php defined('SYSPATH') or die('No direct script access.');
+endsnippet
+
+snippet kt? "Kohana unit test PHP tag" b
+<?php defined('SYSPATH') or die('Kohana bootstrap needs to be included before tests run');
+endsnippet
+
+snippet ki "Kohana text translator" w
+__('$1')
+endsnippet
+
+snippet kfo "Kohana form open" b
+<?php echo Form::open($${1:uri}); ?>
+endsnippet
+
+snippet kfc "Kohana form close" b
+<?php echo Form::close(); ?>
+endsnippet
+
+snippet kfl "Kohana form label implicit"
+Form::label(NULL, __('$1').$2)
+endsnippet
+
+snippet kfi "Kohana form input field"
+Form::input('${1:name}')
+endsnippet
+
+snippet kfb "Kohana form button"
+Form::button('${1:name}', __('${2:label}'))
+endsnippet

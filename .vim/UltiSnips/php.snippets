@@ -1,0 +1,262 @@
+extends c-like
+
+# PHP tags
+snippet ? "Open PHP tag" b
+<?php
+$1
+endsnippet
+
+snippet ?? "Open and close PHP tag" b
+<?php
+$1
+?>
+endsnippet
+
+snippet i? "Inline PHP tag" w
+<?php $1 ?>
+endsnippet
+
+# Value keywords
+snippet F "False" w
+FALSE
+endsnippet
+
+snippet T "True" w
+TRUE
+endsnippet
+
+snippet N "Null" w
+NULL
+endsnippet
+
+# Comments
+snippet fd "File doc comment" b
+/**
+ * $4
+ *
+ * @package   $1
+ * @category  $2
+ * @author    $3
+ */
+endsnippet
+
+snippet "* p" "Parameter documentation" b
+* @param ${1:type} $${2:name}  $0
+endsnippet
+
+snippet "* r" "Return value documentation" b
+* @return ${1:type}  $0
+endsnippet
+
+snippet "* v" "Class variable documentation" b
+* @var ${1:type}  $0
+endsnippet
+
+snippet "* t" "Thrown exception documentation" b
+* @throws ${1:type}  $0
+endsnippet
+
+snippet "* u" "@uses documentation" b
+* @uses ${1:elementi/function()/$variable}  $0
+endsnippet
+
+# Output
+snippet ec "Echo" b
+echo $1;
+endsnippet
+
+snippet iec "Inline echo" w
+<?php echo $1; ?>
+endsnippet
+
+snippet v "var_dump"
+var_dump($1);
+endsnippet
+
+# Arrays
+snippet a "Array"
+array($1)
+endsnippet
+
+snippet a; "Array, terminated"
+array($1);
+endsnippet
+
+snippet A "Multi-line array"
+array( 
+	$1
+)
+endsnippet
+
+snippet A; "Multi-line array, terminated"
+array(
+	$1
+);
+endsnippet
+
+snippet kv "Key/value pair"
+'${1:key}' => ${2:value},
+endsnippet
+
+snippet kvv "Key/quoted-value pair"
+'${1:key}' => '${2:value}',
+endsnippet
+
+# Superglobals
+snippet G "GET values"
+$_GET
+endsnippet	
+
+snippet P "POST values"
+$_POST
+endsnippet
+
+# Classes
+snippet c "Class declaration" b
+class ${1:ClassName} {
+
+	$0
+
+}
+endsnippet
+
+snippet C "Empty class declaration" b
+class ${1:ClassName} {}
+endsnippet
+
+snippet cx "Child class declaration" b
+class ${1:ClassName} extends ${2:ParentClass} {
+
+	$0
+
+}
+endsnippet
+
+snippet CX "Empty child class declaration" b
+class ${1:ClassName} extends ${2:ParentClass} {}
+endsnippet
+
+snippet p "Public visibility" b
+public $0
+endsnippet
+
+snippet pr "Protected visibility" b
+protected $0
+endsnippet
+
+snippet pv "Private visibility" b
+private $0
+endsnippet
+
+snippet st "Static" b
+static $0
+endsnippet
+
+snippet pa "Parent scope"
+parent::
+endsnippet
+
+# Functions
+snippet fn "Function declaration" b
+function ${1:function_name}($2)
+{
+	$0
+}
+endsnippet
+
+# If-else blocks
+snippet ii "Inline if block" b
+<?php if (${1:/* condition */}): ?>
+	$2
+<?php endif; ?>
+endsnippet
+
+snippet ei "Else-if block" b
+elseif (${1:/* condition */})
+{
+	$2
+}
+endsnippet
+
+snippet EI "Single-line else-if block" b
+elseif (${1:/* condition */})
+	$0
+endsnippet
+
+snippet iei "Inline else-if block" b
+<?php elseif (${1:/* condition */}): ?>
+	$0
+endsnippet
+
+snippet ie "Inline else block" b
+<?php else: ?>
+	$0
+endsnippet
+
+# Switch blocks
+snippet s "Switch block" b
+switch ($${1:variable})
+{
+	$0
+	default:
+		$2
+	break;
+}
+endsnippet
+
+snippet ca "Switch case" b
+case $1:
+	$2
+break;
+endsnippet
+
+# Loops
+snippet f "For loop" b
+for ($${1:i} = ${2:0}; ${3:/* condition */}; $$1++)
+{
+	$4
+}
+endsnippet
+
+snippet fe "For-each loop" b
+foreach ($${1:array} as $${2:value})
+{
+	$3
+}
+endsnippet
+
+snippet fk "For-each loop with key" b
+foreach ($${1:array} as $${2:key} => $${3:value})
+{
+	$4
+}
+endsnippet
+
+snippet ife "Inline for-each loop" b
+<?php foreach ($${1:array} as $${2:value}): ?>
+	$3
+<?php endforeach; ?>
+endsnippet
+
+# Exceptions
+snippet t "Throw exception" b
+	throw new ${1:ExceptionType}($2);
+endsnippet
+
+snippet tc "Try-catch block" b
+try
+{
+	$2
+}
+catch (${1:ExceptionType} $exception)
+{
+	$3
+}
+endsnippet
+
+snippet ct "Catch block" b
+catch (${1:ExceptionType} $exception)
+{
+	$2
+}
+endsnippet

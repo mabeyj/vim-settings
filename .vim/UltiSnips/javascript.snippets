@@ -1,0 +1,169 @@
+extends c-like
+
+# Value keywords
+snippet F "False" w
+false
+endsnippet
+
+snippet T "True" w
+true
+endsnippet
+
+snippet N "Null" w
+null
+endsnippet
+
+snippet U "Undefined" w
+undefined
+endsnippet
+
+# Comments
+snippet fd "File doc comment" b
+/**
+ * $2
+ *
+ * @author  $1
+ */
+endsnippet
+
+snippet "* p" "Parameter documentation" b
+* @param {${1:type}} ${2:name}  $0
+endsnippet
+
+snippet "* r" "Return value documentation" b
+* @return {${1:type}}  $0
+endsnippet
+
+snippet "* si" "@since documentation" b
+* @since ${1:version}
+endsnippet
+
+snippet "* t" "Thrown exception documentation" b
+* @throws {${1:type}}  $2
+endsnippet
+
+snippet "* v" "Variable type documentation" b
+* @type $0
+endsnippet
+
+# Output
+snippet cl "Console log" b
+console.log($1);
+endsnippet
+
+snippet cd "Console dir" b
+console.dir($1);
+endsnippet
+
+# Prototypes
+snippet c "Prototype" b
+function ${1:PrototypeName}($2)
+{
+	$0
+}
+endsnippet
+
+snippet pfn "Prototype method"
+${1:PrototypeName}.prototype.${2:methodName} = function($3)
+{
+	$0
+};
+endsnippet
+
+# Arrays
+snippet a "Array" w
+[$1]
+endsnippet
+
+snippet a; "Array, terminated" w
+[$1];
+endsnippet
+
+snippet A "Multi-line array" w
+[
+	$1
+]
+endsnippet
+
+snippet A; "Multi-line array, terminated" w
+[
+	$1
+];
+endsnippet
+
+snippet kv "Key/value pair" w
+${1:key}: ${2:value},
+endsnippet
+
+snippet kvv "Key/quoted-value pair" w
+${1:key}: '${2:value}',
+endsnippet
+
+# Functions
+snippet fn "Function" b
+function ${1:functionName}($2)
+{
+	$0
+}
+endsnippet
+
+# If-else blocks
+snippet ei "Else-if block" b
+else if (${1:/* condition */})
+{
+	$2
+}
+endsnippet
+
+snippet EI "Single-line else-if block" b
+else if (${1:/* condition */})
+	$0
+endsnippet
+
+# Switch blocks
+snippet s "Switch block" b
+switch (${1:variable})
+{
+	$0
+
+	default:
+		$2
+}
+endsnippet
+
+snippet ca "Switch case" b
+case $1:
+	$2
+	break;
+endsnippet
+
+# Loops
+snippet f "For loop" b
+for (var ${1:i} = ${2:0}; ${3:/* condition */}; $1++)
+{
+	$4
+}
+endsnippet
+
+snippet fe "For-in loop" b
+for (var ${1:i} in ${2:array})
+{
+	$3	
+}
+endsnippet
+
+# Exceptions
+snippet t "Throw exception" b
+	throw $1;
+endsnippet
+
+snippet tc "Try-catch block" b
+try
+{
+	$1	
+}
+catch (exception)
+{
+	$2
+}
+endsnippet

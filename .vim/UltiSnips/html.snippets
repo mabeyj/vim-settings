@@ -1,0 +1,27 @@
+# Document structure
+snippet d "HTML5 document" b
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>$1</title>
+	</head>
+	<body>
+		$2
+	</body>
+</html>
+endsnippet
+
+# Tags
+snippet t "Inline element"
+<${1:tag}>$2</$1>
+endsnippet
+
+snippet tt "Block element" b
+<${1:tag}>
+	$2
+</$1>
+endsnippet
+
+snippet a "Attribute"
+${1:attr}="$2"
+endsnippet
