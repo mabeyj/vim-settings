@@ -78,17 +78,27 @@ snippet a "Array"
 array($1)
 endsnippet
 
-snippet aa "Multi-line array"
+snippet a; "Array, terminated"
+array($1);
+endsnippet
+
+snippet A "Multi-line array"
 array( 
 	$1
 )
 endsnippet
 
-snippet k "Key/value pair"
+snippet A; "Multi-line array, terminated"
+array(
+	$1
+);
+endsnippet
+
+snippet kv "Key/value pair"
 '${1:key}' => ${2:value},
 endsnippet
 
-snippet kk "Key/quoted-value pair"
+snippet kvv "Key/quoted-value pair"
 '${1:key}' => '${2:value}',
 endsnippet
 
@@ -110,7 +120,7 @@ class ${1:ClassName} {
 }
 endsnippet
 
-snippet c1 "Empty class declaration" b
+snippet C "Empty class declaration" b
 class ${1:ClassName} {}
 endsnippet
 
@@ -122,7 +132,7 @@ class ${1:ClassName} extends ${2:ParentClass} {
 }
 endsnippet
 
-snippet cx1 "Empty child class declaration" b
+snippet CX "Empty child class declaration" b
 class ${1:ClassName} extends ${2:ParentClass} {}
 endsnippet
 
@@ -168,7 +178,7 @@ elseif (${1:/* condition */})
 }
 endsnippet
 
-snippet ei1 "Single-line else-if block" b
+snippet EI "Single-line else-if block" b
 elseif (${1:/* condition */})
 	$0
 endsnippet

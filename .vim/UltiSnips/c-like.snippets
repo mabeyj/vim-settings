@@ -16,28 +16,50 @@ snippet "* si" "@since documentation" b
 endsnippet
 
 # Brackets/braces
-snippet ss "Brackets" i
+
+# Prevent also matching "cl" at beginning of line for JavaScript
+snippet "((?<!c)|(?<=\w\w))l" "Brackets" r
 [$1]
 endsnippet
 
-snippet dd "Curly braces"
+snippet j "Curly braces"
 {$1}
 endsnippet
 
-snippet ff "Curly brace block"
+snippet j; "Curly braces, terminated"
+{$1};
+endsnippet
+
+snippet J "Curly brace block"
 {
 	$1	
 }
 endsnippet
 
-snippet kk "Parentheses" i
+snippet J; "Curly braces block, terminated"
+{
+	$1
+};
+endsnippet
+
+snippet k "Parentheses" i
 ($1)
 endsnippet
 
-snippet jj "Parentheses block" i
+snippet k; "Parentheses, terminated" i
+($1);
+endsnippet
+
+snippet K "Parentheses block" i
 (
 	$1
 )
+endsnippet
+
+snippet K; "Parentheses block, terminated" i
+(
+	$1
+);
 endsnippet
 
 # Operators
@@ -52,7 +74,7 @@ ${1:/* condition */}
 endsnippet
 
 # Functions
-snippet afn "Anonymous function declaration"
+snippet afn "Anonymous function declaration" w
 function($1)
 {
 	$2
@@ -80,7 +102,7 @@ if (${1:/* condition */})
 }
 endsnippet
 
-snippet i1 "Single-line if block" b
+snippet I "Single-line if block" b
 if (${1:/* condition */})
 	$0
 endsnippet
@@ -92,7 +114,7 @@ else
 }
 endsnippet
 
-snippet e1 "Single-line else block" b
+snippet E "Single-line else block" b
 else
 	$0
 endsnippet
