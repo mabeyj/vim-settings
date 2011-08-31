@@ -10,9 +10,6 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
-[submodule ".vim/bundle/sparkup"]
-	path = .vim/bundle/sparkup
-	url = git://github.com/shannonmoeller/sparkup.vim.git
 [submodule "submodules/sunburst"]
 	path = submodules/sunburst
 	url = https://github.com/gigamo/sunburst.vim.git
@@ -43,3 +40,6 @@
 [submodule ".vim/bundle/ultisnips"]
 	path = .vim/bundle/ultisnips
 	url = git://github.com/vim-scripts/UltiSnips.git
+[submodule "submodules/sparkup"]
+	path = submodules/sparkup
+	url = git://github.com/rstacruz/sparkup.git

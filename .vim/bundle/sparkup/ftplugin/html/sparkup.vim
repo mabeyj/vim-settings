@@ -1,0 +1,1 @@
+../../../../../submodules/sparkup/plugins/vim/ftplugin/html/sparkup.vim
