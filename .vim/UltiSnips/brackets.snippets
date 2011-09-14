@@ -1,0 +1,46 @@
+# Paratheses, brackets, and braces
+
+# Prevent also matching "cl" at beginning of line for JavaScript
+snippet "((?<!c)|(?<=\w\w))l" "Brackets" r
+[$1]
+endsnippet
+
+snippet j "Curly braces"
+{$1}
+endsnippet
+
+snippet j; "Curly braces, terminated"
+{$1};
+endsnippet
+
+snippet J "Curly brace block"
+{
+	$1
+}
+endsnippet
+
+snippet J; "Curly braces block, terminated"
+{
+	$1
+};
+endsnippet
+
+snippet k "Parentheses" i
+($1)
+endsnippet
+
+snippet k; "Parentheses, terminated" i
+($1);
+endsnippet
+
+snippet K "Parentheses block" i
+(
+	$1
+)
+endsnippet
+
+snippet K; "Parentheses block, terminated" i
+(
+	$1
+);
+endsnippet

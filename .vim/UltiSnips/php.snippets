@@ -3,17 +3,17 @@ extends c-like
 # PHP tags
 snippet ? "Open PHP tag" b
 <?php
-$1
+
 endsnippet
 
 snippet ?? "Open and close PHP tag" b
 <?php
-$1
+$0
 ?>
 endsnippet
 
 snippet i? "Inline PHP tag" w
-<?php $1 ?>
+<?php $0 ?>
 endsnippet
 
 # Value keywords
@@ -74,7 +74,7 @@ var_dump($1);
 endsnippet
 
 # Arrays
-snippet a "Array"
+snippet a "Array" i
 array($1)
 endsnippet
 
@@ -82,8 +82,8 @@ snippet a; "Array, terminated"
 array($1);
 endsnippet
 
-snippet A "Multi-line array"
-array( 
+snippet A "Multi-line array" i
+array(
 	$1
 )
 endsnippet
@@ -157,7 +157,7 @@ parent::
 endsnippet
 
 # Functions
-snippet fn "Function declaration" b
+snippet fn "Function declaration"
 function ${1:function_name}($2)
 {
 	$0

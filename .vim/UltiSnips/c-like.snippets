@@ -1,4 +1,5 @@
 # Shared snippets for all C-like languages
+extends brackets
 
 # Comments
 snippet d "Doc comment" b
@@ -15,59 +16,12 @@ snippet "* si" "@since documentation" b
 * @since ${1:version}
 endsnippet
 
-# Brackets/braces
-
-# Prevent also matching "cl" at beginning of line for JavaScript
-snippet "((?<!c)|(?<=\w\w))l" "Brackets" r
-[$1]
-endsnippet
-
-snippet j "Curly braces"
-{$1}
-endsnippet
-
-snippet j; "Curly braces, terminated"
-{$1};
-endsnippet
-
-snippet J "Curly brace block"
-{
-	$1	
-}
-endsnippet
-
-snippet J; "Curly braces block, terminated"
-{
-	$1
-};
-endsnippet
-
-snippet k "Parentheses" i
-($1)
-endsnippet
-
-snippet k; "Parentheses, terminated" i
-($1);
-endsnippet
-
-snippet K "Parentheses block" i
-(
-	$1
-)
-endsnippet
-
-snippet K; "Parentheses block, terminated" i
-(
-	$1
-);
-endsnippet
-
 # Operators
-snippet 3 "Ternary operator"
+snippet 3 "Ternary operator" i
 ${1:/* condition */} ? ${2:/* if true*/} : ${3:/* if false */}
 endsnippet
 
-snippet 33 "Multi-line ternary operator"
+snippet 33 "Multi-line ternary operator" i
 ${1:/* condition */}
 	? ${2:/* if true */}
 	: ${3:/* if false */}
