@@ -43,3 +43,9 @@
 [submodule "submodules/sparkup"]
 	path = submodules/sparkup
 	url = git://github.com/rstacruz/sparkup.git
+[submodule ".vim/bundle/diablo3"]
+	path = .vim/bundle/diablo3
+	url = git://github.com/vim-scripts/Diablo3.git
+[submodule ".vim/bundle/solarized"]
+	path = .vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
