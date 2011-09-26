@@ -15,7 +15,7 @@ set statusline=%f\ %m%h%r%w\ %y\ %{fugitive#statusline()}%=\ B%3n\ ·\ L%5l/%5L\
 set rulerformat=%45(%=B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P%)
 
 " Gvim options
-set guifont=Monospace\ 9
+set guifont=Monospace\ 8
 set guioptions-=e
 set guioptions-=r
 set guioptions-=T
