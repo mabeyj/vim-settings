@@ -27,11 +27,11 @@ snippet fd "File doc comment" b
 endsnippet
 
 snippet "* p" "Parameter documentation" b
-* @param {${1:type}} ${2:name}  $0
+* @param {${1:type}} ${2:name}  $3
 endsnippet
 
 snippet "* r" "Return value documentation" b
-* @return {${1:type}}  $0
+* @return {${1:type}}  $3
 endsnippet
 
 snippet "* si" "@since documentation" b
@@ -43,7 +43,23 @@ snippet "* t" "Thrown exception documentation" b
 endsnippet
 
 snippet "* v" "Variable type documentation" b
-* @type $0
+* @type $1
+endsnippet
+
+snippet "* i" "Inner declaration" b
+* @inner
+endsnippet
+
+snippet "* c" "Constructor declaration" b
+* @constructor
+endsnippet
+
+snippet "* mm" "Module member declaration" b
+* @member module:${1:module_name}
+endsnippet
+
+snippet "* xm" "Extends module prototype documentation" b
+* @extends module:${1:module_name}~${2:PrototypeName}
 endsnippet
 
 # Output
@@ -72,11 +88,15 @@ endsnippet
 
 # Arrays
 snippet a "Array" w
-[$1]
+[$1]$2
 endsnippet
 
 snippet a; "Array, terminated" w
 [$1];
+endsnippet
+
+snippet a, "Array, comma" w
+[$1],$2
 endsnippet
 
 snippet A "Multi-line array" w

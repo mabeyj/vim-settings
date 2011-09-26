@@ -44,6 +44,18 @@ snippet "* p" "Parameter documentation" b
 * @param ${1:type} $${2:name}  $0
 endsnippet
 
+snippet "* pr" "Class property documentation" b
+* @property ${1:type} $${2:name}  $3
+endsnippet
+
+snippet "* prr" "Class read-only property documentation" b
+* @property-read ${1:type} $${2:name}  $3
+endsnippet
+
+snippet "* prw" "Class write-only property documentation" b
+* @property-write ${1:type} $${2:name}  $3
+endsnippet
+
 snippet "* r" "Return value documentation" b
 * @return ${1:type}  $0
 endsnippet
@@ -82,6 +94,10 @@ snippet a; "Array, terminated"
 array($1);
 endsnippet
 
+snippet a, "Array, comma"
+array($1),
+endsnippet
+
 snippet A "Multi-line array" i
 array(
 	$1
@@ -92,6 +108,12 @@ snippet A; "Multi-line array, terminated"
 array(
 	$1
 );
+endsnippet
+
+snippet A, "Multi-line array, comma"
+array(
+	$1
+),
 endsnippet
 
 snippet kv "Key/value pair"
