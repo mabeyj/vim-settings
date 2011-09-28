@@ -1,0 +1,113 @@
+extends brackets
+
+# Strings
+snippet d
+"""
+$1
+"""
+endsnippet
+
+# If-else blocks
+snippet i "If statement" b
+if ${1:expr}:
+	$2
+endsnippet
+
+snippet ei "Else-if" b
+elif ${1:expr}:
+	$2
+endsnippet
+
+snippet e "Else" b
+else:
+	$1
+endsnippet
+
+# Loops
+snippet w "While loop" b
+while ${1:expr}:
+	$2
+endsnippet
+
+snippet f "For loop" b
+for ${1:i} in ${2:var}:
+	$3
+endsnippet
+
+# Logical statements
+snippet b "Break" b
+break
+endsnippet
+
+snippet c "Continue" b
+continue
+endsnippet
+
+snippet p "Pass" b
+pass
+endsnippet
+
+snippet r "Return" b
+return $1
+endsnippet
+
+# Value keywords
+snippet F "False" b
+False
+endsnippet
+
+snippet T "True" b
+True
+endsnippet
+
+snippet N "None" b
+None
+endsnippet
+
+# Functions
+snippet fn "Function" b
+def ${1:function_name}($2):
+	$3
+endsnippet
+
+snippet afn "Lambda function" w
+lambda ${1:args}: ${2:expr}
+endsnippet
+
+# Key-value pairs
+snippet kv "Key/value pair" w
+${1:key}: ${2:value},
+endsnippet
+
+# Exceptions
+snippet t "Raise exception" b
+raise ${1:ExceptionName}($2)
+endsnippet
+
+snippet tc "Try/except block" b
+try:
+	$2
+except ${1:ExceptionName}:
+	$3
+endsnippet
+
+snippet ct "Except block" b
+except ${1:ExceptionName}:
+	$2
+endsnippet
+
+snippet fin "Finally block" b
+finally:
+	$1
+endsnippet
+
+# Classes
+snippet c "Class" b
+class ${1:ClassName}:
+	$2
+endsnippet
+
+snippet cx "Child class" b
+class ${1:ChildClassName}(${2:ParentClassName}):
+	$3
+endsnippet
