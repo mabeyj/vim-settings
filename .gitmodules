@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/solarized"]
 	path = .vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/xoria256"]
+	path = .vim/bundle/xoria256
+	url = git://github.com/vim-scripts/xoria256.vim.git
