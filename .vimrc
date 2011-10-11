@@ -9,6 +9,7 @@ set formatoptions+=12cnoqr
 set listchars=tab:>\ ,trail:$
 set scrolloff=3                 " Give more context when scrolling
 set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
+set wildmenu                    " Show keyword list of tab autocomplete
 set colorcolumn=81              " Highlight long lines
 
 set statusline=%f\ %m%h%r%w\ %y\ %{fugitive#statusline()}%=\ B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P
@@ -23,7 +24,7 @@ set guioptions-=L
 
 " Colour scheme
 set background=dark
-color sunburst
+color xoria256
 hi Normal ctermbg=none
 hi NonText ctermbg=none
 
@@ -35,7 +36,7 @@ function! <SID>TrimTrailingWhitespace()
 	call cursor(l, c)
 endfunction
 
-autocmd BufWritePre *.php,*.css,*.html,*.js :call <SID>TrimTrailingWhitespace()
+autocmd BufWritePre *.php,*.py,*.css,*.html,*.js :call <SID>TrimTrailingWhitespace()
 
 " Filetype-specific settings
 " ------------------------------------------------------------------------------
@@ -53,6 +54,9 @@ autocmd FileType gitcommit DiffGitCached | wincmd L
 " Mappings
 " ------------------------------------------------------------------------------
 set pastetoggle=<Leader>p
+
+nnoremap <Leader>z :sp ~/.vimrc<CR>
+nnoremap <Leader>x :so ~/.vimrc<CR>
 
 nnoremap <Leader>f :NERDTreeToggle<CR>
 nnoremap <Leader>F :NERDTreeMirror<CR>
@@ -75,7 +79,7 @@ cnoremap w!! w !sudo tee % > /dev/null
 
 " Hit jk at same time to trigger Esc
 call arpeggio#load()
-Arpeggio inoremap jk <Esc>
+Arpeggio noremap! jk <Esc>
 " ------------------------------------------------------------------------------
 
 " Plugin settings
@@ -94,6 +98,7 @@ let g:tagbar_autoclose=1
 
 " NERDTree
 let NERDTreeMouseMode=2
+let NERDTreeQuitOnOpen=1
 
 " Sparkup
 let g:sparkupNextMapping='<C-B>'     " Prevent conflict with Vim's autocomplete
