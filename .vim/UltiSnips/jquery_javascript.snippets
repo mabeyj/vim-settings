@@ -6,8 +6,12 @@ $(function()
 });
 endsnippet
 
-snippet q "jQuery selector"
-$('$1')
+snippet "(?<!q)q" "jQuery selector" wr
+$($1)$0
+endsnippet
+
+snippet qq "jQuery quoted selector" w
+$('$1')$0
 endsnippet
 
 # Prototypes
