@@ -2,31 +2,42 @@
 call pathogen#infect()
 Helptags
 
-" Basic Vim settings
+" Basic Vim settings {{{
+
 set incsearch mouse=a number showcmd
 set autoindent tabstop=4 shiftwidth=4
-set formatoptions+=12cnoqr
 set listchars=tab:>\ ,trail:$
 set scrolloff=3                 " Give more context when scrolling
 set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
 set wildmenu                    " Show keyword list of tab autocomplete
+
+set textwidth=80
 set colorcolumn=81              " Highlight long lines
 
 set statusline=%f\ %m%h%r%w\ %y\ %{fugitive#statusline()}%=\ B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P
 set rulerformat=%45(%=B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P%)
 
-" Gvim options
-set guifont=Monospace\ 8
+" }}}
+" Gvim options {{{
+
+set guifont=Code2_smooth\ 12
 set guioptions-=e
 set guioptions-=r
 set guioptions-=T
 set guioptions-=L
 
-" Colour scheme
+" }}}
+" Colour scheme {{{
+
 set background=dark
 color xoria256
 hi Normal ctermbg=none
 hi NonText ctermbg=none
+
+" }}}
+" Filetype-specific settings {{{
+
+filetype plugin on
 
 " Trim trailing spaces for certain filetypes
 function! <SID>TrimTrailingWhitespace()
@@ -36,23 +47,18 @@ function! <SID>TrimTrailingWhitespace()
 	call cursor(l, c)
 endfunction
 
-autocmd BufWritePre *.php,*.py,*.css,*.html,*.js :call <SID>TrimTrailingWhitespace()
-
-" Filetype-specific settings
-" ------------------------------------------------------------------------------
-filetype plugin on
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-
-" Only continue doc comment structures
-autocmd FileType php        set comments=s:/*,mb:\ *,ex:*/
-autocmd FileType javascript set comments=s:/*,mb:\ *,ex:*/
+autocmd FileType javascript,php,python autocmd BufWritePre <buffer> :call <SID>TrimTrailingWhitespace()
 
 " Show cached diff when committing with Git
 autocmd FileType gitcommit DiffGitCached | wincmd L
-" ------------------------------------------------------------------------------
 
-" Mappings
-" ------------------------------------------------------------------------------
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType php set comments=sr:/*,mb:*,ex:*/,://
+autocmd FileType php,javascript set fo=croqn1
+
+" }}}
+" Mappings {{{
+
 set pastetoggle=<Leader>p
 
 nnoremap <Leader>z :sp ~/.vimrc<CR>
@@ -79,10 +85,10 @@ cnoremap w!! w !sudo tee % > /dev/null
 " Hit jk at same time to trigger Esc
 call arpeggio#load()
 Arpeggio noremap! jk <Esc>
-" ------------------------------------------------------------------------------
 
-" Plugin settings
-" ------------------------------------------------------------------------------
+" }}}
+" Plugin settings {{{
+
 " Indent guides
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
@@ -103,6 +109,4 @@ let NERDTreeIgnore=['\.pyc$', '^__pycache__$']
 " Sparkup
 let g:sparkupNextMapping='<C-B>'     " Prevent conflict with Vim's autocomplete
 
-" Snipmate
-let g:snipMate={'scope_aliases': {'php': 'php'}}  " Don't mix other snippets with PHP
-" ------------------------------------------------------------------------------
+" }}}
