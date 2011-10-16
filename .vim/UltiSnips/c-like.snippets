@@ -2,7 +2,7 @@
 extends brackets
 
 # Comments
-snippet d "Doc comment" b
+snippet d "Doc comment" bf
 /**
  * $1
  */
@@ -58,7 +58,7 @@ endsnippet
 
 snippet I "Single-line if block" b
 if (${1:/* condition */})
-	$0
+	$2
 endsnippet
 
 snippet e "Else block" b
@@ -70,7 +70,7 @@ endsnippet
 
 snippet E "Single-line else block" b
 else
-	$0
+	$1
 endsnippet
 
 # Loops

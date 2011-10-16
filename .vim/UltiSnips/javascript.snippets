@@ -18,7 +18,7 @@ undefined
 endsnippet
 
 # Comments
-snippet fd "File doc comment" b
+snippet fd "File doc comment" bf
 /**
  * $2
  *
@@ -75,20 +75,20 @@ endsnippet
 snippet c "Prototype" b
 function ${1:PrototypeName}($2)
 {
-	$0
+	$2
 }
 endsnippet
 
 snippet pfn "Prototype method"
 ${1:PrototypeName}.prototype.${2:methodName} = function($3)
 {
-	$0
+	$4
 };
 endsnippet
 
 # Arrays
 snippet a "Array" w
-[$1]$2
+[$1]
 endsnippet
 
 snippet a; "Array, terminated" w
@@ -96,7 +96,7 @@ snippet a; "Array, terminated" w
 endsnippet
 
 snippet a, "Array, comma" w
-[$1],$2
+[$1],
 endsnippet
 
 snippet A "Multi-line array" w
@@ -123,7 +123,7 @@ endsnippet
 snippet fn "Function" b
 function ${1:functionName}($2)
 {
-	$0
+	$3
 }
 endsnippet
 
@@ -137,14 +137,14 @@ endsnippet
 
 snippet EI "Single-line else-if block" b
 else if (${1:/* condition */})
-	$0
+	$2
 endsnippet
 
 # Switch blocks
 snippet s "Switch block" b
 switch (${1:variable})
 {
-	$0
+	$3
 
 	default:
 		$2

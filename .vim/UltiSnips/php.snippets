@@ -30,7 +30,7 @@ NULL
 endsnippet
 
 # Comments
-snippet fd "File doc comment" b
+snippet fd "File doc comment" bf
 /**
  * $4
  *
@@ -41,7 +41,7 @@ snippet fd "File doc comment" b
 endsnippet
 
 snippet "* p" "Parameter documentation" b
-* @param ${1:type} $${2:name}  $0
+* @param ${1:type} $${2:name}  $3
 endsnippet
 
 snippet "* pr" "Class property documentation" b
@@ -57,19 +57,19 @@ snippet "* prw" "Class write-only property documentation" b
 endsnippet
 
 snippet "* r" "Return value documentation" b
-* @return ${1:type}  $0
+* @return ${1:type}  $2
 endsnippet
 
 snippet "* v" "Class variable documentation" b
-* @var ${1:type}  $0
+* @var ${1:type}  $2
 endsnippet
 
 snippet "* t" "Thrown exception documentation" b
-* @throws ${1:type}  $0
+* @throws ${1:type}  $2
 endsnippet
 
 snippet "* u" "@uses documentation" b
-* @uses ${1:elementi/function()/$variable}  $0
+* @uses ${1:elementi/function()/$variable}  $2
 endsnippet
 
 # Output
