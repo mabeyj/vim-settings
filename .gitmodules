@@ -22,9 +22,6 @@
 [submodule ".vim/bundle/tlib"]
 	path = .vim/bundle/tlib
 	url = git://github.com/tomtom/tlib_vim.git
-[submodule ".vim/bundle/align"]
-	path = .vim/bundle/align
-	url = git://github.com/vim-scripts/Align.git
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
@@ -52,3 +49,6 @@
 [submodule ".vim/bundle/xoria256"]
 	path = .vim/bundle/xoria256
 	url = git://github.com/vim-scripts/xoria256.vim.git
+[submodule ".vim/bundle/tabular"]
+	path = .vim/bundle/tabular
+	url = git://github.com/godlygeek/tabular.git

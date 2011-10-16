@@ -62,17 +62,16 @@ nnoremap <Leader>f :NERDTreeToggle<CR>
 nnoremap <Leader>F :NERDTreeMirror<CR>
 nnoremap <Leader>d :TagbarToggle<CR>
 
-" Align key/value pairs -- would like to avoid using a mark, but Align acts
-" weird when used in a function
-autocmd FileType php        nnoremap <Leader>k mZ:AlignCtrl lp1P1:<CR>[(jV])k:Align =><CR>`Z
-autocmd FileType php        vnoremap <Leader>k <Esc>:AlignCtrl lp1P1:<CR>:Align =><CR>
-autocmd FileType javascript vnoremap <Leader>k <Esc>:AlignCtrl l<p0P0:<CR>:'<,'>Align " "<CR>
+" Align key/value pairs
+autocmd FileType php nnoremap <Leader>k :Tabular php_key<CR>
+autocmd FileType php vnoremap <Leader>k :Tabular php_key<CR>
+
+autocmd FileType javascript nnoremap <Leader>k :Tabular javascript_key<CR>
+autocmd FileType javascript vnoremap <Leader>k :Tabular javascript_key<CR>
 
 " Align doc comment @param descriptions
-vnoremap <Leader>j :s/  \+/  /g<CR>:AlignCtrl lp0P0:<CR>:'<,'>Align "  "<CR>
-
-" Fix indentation of doc comments
-nnoremap <Leader>c ?\/\*\*<CR>V/\*\/<CR>=``
+autocmd FileType php,javascript nnoremap <leader>j :Tabular multiple_spaces<CR>
+autocmd FileType php,javascript vnoremap <leader>j :Tabular multiple_spaces<CR>
 
 " Write with sudo
 cnoremap w!! w !sudo tee % > /dev/null
