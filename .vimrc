@@ -62,11 +62,13 @@ autocmd FileType php,javascript set fo=croqn1
 set pastetoggle=<Leader>p
 
 nnoremap <Leader>z :sp ~/.vimrc<CR>
-nnoremap <Leader>x :so ~/.vimrc<CR>
+nnoremap <Leader>x :so %<CR>
 
 nnoremap <Leader>f :NERDTreeToggle<CR>
 nnoremap <Leader>F :NERDTreeMirror<CR>
 nnoremap <Leader>d :TagbarToggle<CR>
+
+nnoremap <Leader>g :IndentGuidesToggle<CR>
 
 " Align key/value pairs
 autocmd FileType php nnoremap <Leader>k :Tabular php_key<CR>
@@ -76,8 +78,28 @@ autocmd FileType javascript nnoremap <Leader>k :Tabular javascript_key<CR>
 autocmd FileType javascript vnoremap <Leader>k :Tabular javascript_key<CR>
 
 " Align doc comment @param descriptions
-autocmd FileType php,javascript nnoremap <leader>j :Tabular multiple_spaces<CR>
-autocmd FileType php,javascript vnoremap <leader>j :Tabular multiple_spaces<CR>
+autocmd FileType php,javascript nnoremap <Leader>j :Tabular multiple_spaces<CR>
+autocmd FileType php,javascript vnoremap <Leader>j :Tabular multiple_spaces<CR>
+
+" Change single-line parenthesized group into multiple, indented lines
+"
+" (<expr>)  =>  (
+"                   <expr>
+"               )
+"
+" TODO: Also split up arguments on multiple lines
+nnoremap <Leader>i [(a<CR><C-t><Esc>])i<CR><C-d><Esc>k$
+
+" Move chained function call to new line ("c" indents, "C" does not)
+"
+" .one().two().three(<expr>)  =>  <Leader>c  =>  .one().two()
+"    Cursor here ^                                   .three(<expr>)
+"
+" .one()                      =>  <Leader>C  =>  .one()
+"     .two().three(<expr>)                           .two()
+"    Cursor here ^                                   .three(<expr>)
+nnoremap <Leader>c F.i<CR><Esc>%V%>%
+nnoremap <Leader>C F.i<CR><Esc>%
 
 " Write with sudo
 cnoremap w!! w !sudo tee % > /dev/null
