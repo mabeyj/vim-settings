@@ -106,7 +106,9 @@ cnoremap w!! w !sudo tee % > /dev/null
 
 " Hit jk at same time to trigger Esc
 call arpeggio#load()
-Arpeggio noremap! jk <Esc>
+Arpeggio noremap jk <Esc>
+Arpeggio inoremap jk <Esc>
+Arpeggio cnoremap jk <C-c>
 
 " }}}
 " Plugin settings {{{
