@@ -30,9 +30,8 @@ set guioptions-=L
 " Colour scheme {{{
 
 set background=dark
-color xoria256
-hi Normal ctermbg=none
-hi NonText ctermbg=none
+color sunburst
+hi ColorColumn ctermbg=234
 
 " }}}
 " Filetype-specific settings {{{
