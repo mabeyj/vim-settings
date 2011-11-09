@@ -55,6 +55,9 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType php set comments=sr:/*,mb:*,ex:*/,://
 autocmd FileType php,javascript set fo=croqn1
 
+" For some reason, tags are wrapped
+autocmd FileType html,xml set fo=roqn1
+
 " }}}
 " Mappings {{{
 
