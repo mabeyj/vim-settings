@@ -69,6 +69,14 @@ nnoremap <Leader>d :TagbarToggle<CR>
 
 nnoremap <Leader>g :IndentGuidesToggle<CR>
 
+nnoremap <Leader><Leader> :set spell!<CR>
+
+" Better unmatched bracket mappings
+nnoremap [b [(
+nnoremap ]b ])
+nnoremap [B [{
+nnoremap ]B ]}
+
 " Align key/value pairs
 autocmd FileType php nnoremap <Leader>k :Tabular php_key<CR>
 autocmd FileType php vnoremap <Leader>k :Tabular php_key<CR>
@@ -79,6 +87,10 @@ autocmd FileType javascript vnoremap <Leader>k :Tabular javascript_key<CR>
 " Align doc comment @param descriptions
 autocmd FileType php,javascript nnoremap <Leader>j :Tabular multiple_spaces<CR>
 autocmd FileType php,javascript vnoremap <Leader>j :Tabular multiple_spaces<CR>
+
+" Align on =
+nnoremap <Leader>= :Tabular /=<CR>
+vnoremap <Leader>= :Tabular /=<CR>
 
 " Change single-line parenthesized group into multiple, indented lines
 "
