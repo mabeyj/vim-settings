@@ -16,6 +16,15 @@ snippet i? "Inline PHP tag" w
 <?php $0 ?>
 endsnippet
 
+# Miscellaneous
+snippet h "Arrow" i
+->$1
+endsnippet
+
+snippet H "$this object" i
+$this->$1
+endsnippet
+
 # Value keywords
 snippet F "False" w
 FALSE
@@ -81,12 +90,15 @@ snippet iec "Inline echo" w
 <?php echo $1; ?>
 endsnippet
 
-snippet v "var_dump"
+# Disambiguate from "* v", "pv", and "kv"
+snippet "(?<!\* )(?<![kp])v" "var_dump" r
 var_dump($1);
 endsnippet
 
 # Arrays
-snippet a "Array" i
+
+# Disambiguate from "ca" and "pa"
+snippet "(?<![cp])a" "Array" ir
 array($1)
 endsnippet
 
@@ -125,11 +137,11 @@ snippet kvv "Key/quoted-value pair" w
 endsnippet
 
 # Superglobals
-snippet G "GET values"
+snippet G "GET values" w
 $_GET
 endsnippet	
 
-snippet P "POST values"
+snippet P "POST values" w
 $_POST
 endsnippet
 
@@ -261,8 +273,10 @@ snippet ife "Inline for-each loop" b
 endsnippet
 
 # Exceptions
-snippet t "Throw exception" b
-	throw new ${1:ExceptionType}($2);
+
+# Disambiguate from "* t"
+snippet "(?<!\* )t" "Throw exception" br
+throw new ${1:ExceptionType}($2);
 endsnippet
 
 snippet tc "Try-catch block" b
