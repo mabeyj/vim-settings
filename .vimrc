@@ -80,6 +80,15 @@ nnoremap ]b ])
 nnoremap [B [{
 nnoremap ]B ]}
 
+nnoremap c[b c[(
+nnoremap c]b c])
+nnoremap c[B c[{
+nnoremap c]B c]}
+
+" Open documentation for current word -- for some reason, the screen gets
+" cleared and needs to be redrawn
+autocmd FileType php nnoremap K :silent !google-chrome http://php.net/<cword><CR>:redraw!<CR>
+
 " Align key/value pairs
 autocmd FileType php nnoremap <Leader>k :Tabular php_key<CR>
 autocmd FileType php vnoremap <Leader>k :Tabular php_key<CR>
