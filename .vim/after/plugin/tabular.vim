@@ -7,11 +7,11 @@ endif
 " if the key is a single- or double-quoted string.
 AddTabularPattern! php_key /^\s*\('\(\\'\|[^']\)*'\|"\(\\"\|[^"]\)*"\|.*\)\s*\zs=>/
 
-" Align JavaScript values, but don't line up every ":" separator (i.e., ":" is
-" placed directly after key)
+" Align JavaScript key/value pairs, but don't line up every ":" separator (i.e.,
+" ":" inside a key or value).
 "
 " Pipeline works as follows: reduce whitespace so that each line is simply
-" "<key>: <value>", then align on space directly after the cursor.
+" "<key>: <value>", then align on space directly after the colon.
 AddTabularPipeline! javascript_key /:/
-	\ map(a:lines, 'substitute(v:val, ''^\s*\(''''\(\\''''\|[^\'''']\)*''''\|"\(\\"\|[^"]\)*"\|\S\+\)\zs\s*:\s*'', ": ", "")')
-	\ | tabular#TabularizeStrings(a:lines, '^\s*\(''\(\\''\|[^\'']\)*''\|"\(\\"\|[^"]\)*"\|[^:]\+\):\zs ', 'l0')
+	\ map(a:lines, 'substitute(v:val, ''^\s*\(''''\(\\''''\|[^\'''']\)*''''\|"\(\\"\|[^"]\)*"\|\w\+\)\zs\s*:\s*'', ": ", "")')
+	\ | tabular#TabularizeStrings(a:lines, '^\s*\(''\(\\''\|[^\'']\)*''\|"\(\\"\|[^"]\)*"\|\w\+\):\zs ', 'l0')
