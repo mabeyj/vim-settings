@@ -2,7 +2,7 @@
 
 # Prevent also matching "cl" at beginning of line for JavaScript
 snippet "((?<!c)|(?<=\w\w))l" "Brackets" r
-[$1]
+[$1]$2
 endsnippet
 
 snippet j "Curly braces"
@@ -26,11 +26,11 @@ snippet J; "Curly braces block, terminated" w
 endsnippet
 
 snippet k "Parentheses" i
-($1)
+($1)$2
 endsnippet
 
 snippet k; "Parentheses, terminated" i
-($1);
+($1);$2
 endsnippet
 
 snippet K "Parentheses block" i
