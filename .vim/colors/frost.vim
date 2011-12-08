@@ -7,22 +7,26 @@ endif
 
 let g:colors_name = "frost"
 
+" Splits
+hi ColorColumn              ctermbg=234
+hi Folded       ctermfg=242 ctermbg=234
+hi FoldColumn   ctermfg=242 ctermbg=234
+hi LineNr       ctermfg=238 ctermbg=233
+hi StatusLine   ctermfg=238 ctermbg=245
+hi StatusLineNC ctermfg=235 ctermbg=242
+hi VertSplit    ctermfg=235 ctermbg=235
+
 " Vim interface
-hi ColorColumn              ctermbg=232
 hi CursorLine   ctermbg=0                cterm=none
 hi Directory    ctermfg=36
-hi LineNr       ctermfg=234 ctermbg=232
 hi MatchParen               ctermbg=23
-hi ModeMsg      ctermfg=234
+hi ModeMsg      ctermfg=238
 hi MoreMsg      ctermfg=81
 hi NonText      ctermfg=234
 hi Question     ctermfg=81
 hi Search       ctermfg=136 ctermbg=none cterm=underline
 hi SpecialKey   ctermfg=81
-hi StatusLine   ctermfg=238 ctermbg=234
-hi StatusLineNC ctermfg=234 ctermbg=238
 hi Title        ctermfg=81
-hi VertSplit    ctermfg=234 ctermbg=234
 hi WildMenu                 ctermbg=81
 
 " Red error
@@ -103,3 +107,10 @@ hi phpParent        ctermfg=215
 
 " Purple
 hi Visual ctermbg=55
+
+" Diffs
+hi DiffAdd     ctermfg=84 ctermbg=22
+hi diffAdded   ctermfg=84 ctermbg=22
+hi DiffChange  ctermfg=228 ctermbg=58
+hi DiffDelete  ctermfg=161 ctermbg=52
+hi diffRemoved ctermfg=161 ctermbg=52
