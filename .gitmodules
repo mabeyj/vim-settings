@@ -36,7 +36,7 @@
 	url = git://github.com/vim-scripts/vimwiki.git
 [submodule ".vim/bundle/ultisnips"]
 	path = .vim/bundle/ultisnips
-	url = git://github.com/vim-scripts/UltiSnips.git
+	url = git://github.com/SirVer/ultisnips.git
 [submodule "submodules/sparkup"]
 	path = submodules/sparkup
 	url = git://github.com/rstacruz/sparkup.git
