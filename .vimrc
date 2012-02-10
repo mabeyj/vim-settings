@@ -48,9 +48,6 @@ endfunction
 
 autocmd FileType javascript,php,python autocmd BufWritePre <buffer> :call <SID>TrimTrailingWhitespace()
 
-" Show cached diff when committing with Git
-autocmd FileType gitcommit DiffGitCached | wincmd L
-
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType php set comments=sr:/*,mb:*,ex:*/,://
 autocmd FileType php,javascript set fo=croqn1
