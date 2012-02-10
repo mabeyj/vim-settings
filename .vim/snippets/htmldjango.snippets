@@ -1,0 +1,23 @@
+extends html
+
+snippet v "Django variable" i
+{{ ${1:variable} }}
+endsnippet
+
+snippet j "Django tag" i
+{% ${1:tag} %}
+endsnippet
+
+snippet b "Block tag"
+{% block ${1:name} %}$0{% endblock %}
+endsnippet
+
+snippet B "Block tag (multiline)"
+{% block ${1:name} %}
+$0
+{% endblock %}
+endsnippet
+
+snippet s "block.super" i
+{{ block.super }}
+endsnippet
