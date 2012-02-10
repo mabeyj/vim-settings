@@ -46,7 +46,7 @@ function! <SID>TrimTrailingWhitespace()
 	call cursor(l, c)
 endfunction
 
-autocmd FileType javascript,php,python autocmd BufWritePre <buffer> :call <SID>TrimTrailingWhitespace()
+autocmd FileType javascript,php,python,sh,css,html autocmd BufWritePre <buffer> :call <SID>TrimTrailingWhitespace()
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType php set comments=sr:/*,mb:*,ex:*/,://
