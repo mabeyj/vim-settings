@@ -20,7 +20,7 @@ set rulerformat=%45(%=B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P%
 " }}}
 " Gvim options {{{
 
-set guifont=Code2_smooth\ 12
+set guifont=Code2_smooth_v2\ 12
 set guioptions-=e
 set guioptions-=r
 set guioptions-=T
@@ -30,8 +30,12 @@ set guioptions-=L
 " Colour scheme {{{
 
 set background=dark
-color sunburst
-hi ColorColumn ctermbg=234
+
+if has("gui_running")
+	color frost-gui
+else
+	color frost
+endif
 
 " }}}
 " Filetype-specific settings {{{
