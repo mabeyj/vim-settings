@@ -19,8 +19,12 @@ undefined
 endsnippet
 
 # Miscellaneous
-snippet H "this object" i
-this.$1
+snippet h "this object" i
+this
+endsnippet
+
+snippet H "this object property" i
+this.${1:property}
 endsnippet
 
 # Comments
@@ -85,6 +89,10 @@ function ${1:PrototypeName}($2)
 }
 endsnippet
 
+snippet cx "Prototype extension" b
+${1:ChildPrototype}.prototype = new ${2:ParentPrototype};
+endsnippet
+
 snippet pfn "Prototype method"
 ${1:PrototypeName}.prototype.${2:methodName} = function($3)
 {
@@ -92,31 +100,19 @@ ${1:PrototypeName}.prototype.${2:methodName} = function($3)
 };
 endsnippet
 
-# Arrays and objects
-snippet a "Array" w
-[$1]
+snippet pa "Parent prototype" b
+${1:ParentPrototype}.prototype.${2:property}
 endsnippet
 
-snippet a; "Array, terminated" w
-[$1];
+snippet cpa "Call parent prototype function"
+${1:ParentPrototype}.prototype.${2:functionName}.apply(this, arguments);
 endsnippet
 
-snippet a, "Array, comma" w
-[$1],
+snippet cpac "Call parent prototype constructor"
+${1:ParentPrototype}.apply(this, arguments);
 endsnippet
 
-snippet A "Multi-line array" w
-[
-	$1
-]
-endsnippet
-
-snippet A; "Multi-line array, terminated" w
-[
-	$1
-];
-endsnippet
-
+# Objects
 snippet kv "Key/value pair" w
 ${1:key}: ${2:value},
 endsnippet

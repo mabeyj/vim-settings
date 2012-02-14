@@ -1,0 +1,24 @@
+snippet qunit "Test HTML template"
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>${1:Title}</title>
+		<link rel="stylesheet" href="http://code.jquery.com/qunit/git/qunit.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/qunit/git/qunit.js"></script>
+		${2:<!-- Scripts -->}
+		<script src="tests.js"></script>
+	</head>
+	<body>
+		<h1 id="qunit-header">$1</h1>
+		<h2 id="qunit-banner"></h2>
+		<div id="qunit-testrunner-toolbar"></div>
+		<h2 id="qunit-userAgent"></h2>
+		<ol id="qunit-tests"></ol>
+		<div id="qunit-fixture">
+			${3:<!-- Fixture -->}
+		</div>
+	</body>
+</html>
+endsnippet

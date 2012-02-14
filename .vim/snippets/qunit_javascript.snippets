@@ -1,0 +1,61 @@
+snippet qunit "Test JavaScript template"
+/**
+ * ${1:<description>} tests.
+ *
+ * @author  ${2:<author>}
+ */
+$(function()
+{
+	${3:// Write tests here.}
+});
+endsnippet
+
+snippet qm "New module"
+module('${1:name}');
+endsnippet
+
+snippet qms "New module with setup"
+module('${1:name}',{
+	setup: function()
+	{
+		${2:// TODO: Setup code}
+	}
+});
+endsnippet
+
+snippet qt "New test"
+test('${1:name}', function()
+{
+	${2:// TODO: Test code}
+});
+endsnippet
+
+snippet qat "New async test"
+asyncTest('${1:name}', function()
+{
+	${2:// TODO: Test code}
+});
+endsnippet
+
+snippet qo "Assert true"
+ok(${1:/* state */});
+endsnippet
+
+snippet qe "Assert equal"
+equal(${1:/* actual */}, ${2:/* expected */});
+endsnippet
+
+snippet qse "Assert strict equal"
+strictEqual(${1:/* actual */}, ${2:/* expected */});
+endsnippet
+
+snippet qde "Assert deep equal"
+deepEqual(${1:/* actual */}, ${2:/* expected */});
+endsnippet
+
+snippet qr "Assert raises exception"
+raises(function()
+{
+	${1:// Code}
+});
+endsnippet

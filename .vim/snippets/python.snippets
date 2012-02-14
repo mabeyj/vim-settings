@@ -81,7 +81,7 @@ endsnippet
 
 # Key-value pairs
 snippet kv "Key/value pair" w
-${1:key}: ${2:value},
+'${1:key}': '${2:value}',
 endsnippet
 
 # Exceptions
@@ -115,4 +115,13 @@ endsnippet
 snippet cx "Child class" b
 class ${1:ChildClassName}(${2:ParentClassName}):
 	$3
+endsnippet
+
+snippet pa "Parent class"
+super(${1:ClassName}, self).$0
+endsnippet
+
+# Miscellaneous
+snippet g "self object" i
+self.
 endsnippet
