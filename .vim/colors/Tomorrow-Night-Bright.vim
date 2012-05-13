@@ -1,0 +1,1 @@
+../../submodules/tomorrow/vim/colors/Tomorrow-Night-Bright.vim

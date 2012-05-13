@@ -1,1 +1,1 @@
-../../submodules/tomorrow/Vim/Tomorrow-Night.vim
+../../submodules/tomorrow/vim/colors/Tomorrow-Night.vim
