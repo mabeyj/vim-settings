@@ -2,14 +2,19 @@
 call pathogen#infect()
 Helptags
 
+
 " Basic Vim settings {{{
 
 set incsearch mouse=a number showcmd
 set autoindent tabstop=4 shiftwidth=4
-set listchars=tab:>\ ,trail:$
+set listchars=tab:▹—,trail:$,extends:>,precedes:<,eol:¬,nbsp:·
+
+set copyindent                  " Preserve vertical alignment when indenting
 set scrolloff=3                 " Give more context when scrolling
 set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
 set wildmenu                    " Show keyword list of tab autocomplete
+set t_Co=256                    " Fix colour issues when running in tmux
+set formatoptions-=t            " Don't auto-wrap text everywhere
 
 set textwidth=80
 set colorcolumn=81              " Highlight long lines
@@ -20,11 +25,12 @@ set rulerformat=%45(%=B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P%
 " }}}
 " Gvim options {{{
 
-set guifont=Code2_smooth_v2\ 12
+set guifont=Liberation\ Mono\ 10
 set guioptions-=e
 set guioptions-=r
 set guioptions-=T
 set guioptions-=L
+set guioptions-=m
 
 " }}}
 " Colour scheme {{{
@@ -50,14 +56,12 @@ function! <SID>TrimTrailingWhitespace()
 	call cursor(l, c)
 endfunction
 
-autocmd FileType javascript,php,python,sh,css,html autocmd BufWritePre <buffer> :call <SID>TrimTrailingWhitespace()
+autocmd FileType javascript,php,python,sh,css,html,xml autocmd BufWritePre <buffer> :call <SID>TrimTrailingWhitespace()
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType php set comments=sr:/*,mb:*,ex:*/,://
-autocmd FileType php,javascript set fo=croqn1
+autocmd FileType php,javascript,python set formatoptions=croqn1
 
-" For some reason, tags are wrapped
-autocmd FileType html,xml set fo=roqn1
 
 " }}}
 " Mappings {{{
