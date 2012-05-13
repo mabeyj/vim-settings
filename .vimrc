@@ -79,6 +79,9 @@ nnoremap <Leader>g :IndentGuidesToggle<CR>
 
 nnoremap <Leader><Leader> :set spell!<CR>
 
+iabbrev #D <C-r>=strftime("%F %I:%M %p")<CR>
+iabbrev #t <C-r>=strftime("%I:%M %p")<CR>
+
 " Better unmatched bracket mappings
 nnoremap [b [(
 nnoremap ]b ])
