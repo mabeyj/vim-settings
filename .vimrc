@@ -2,7 +2,6 @@
 call pathogen#infect()
 Helptags
 
-
 " Basic Vim settings {{{
 
 set incsearch mouse=a number showcmd
@@ -48,20 +47,9 @@ endif
 
 filetype plugin on
 
-" Trim trailing spaces for certain filetypes
-function! <SID>TrimTrailingWhitespace()
-	let l = line(".")
-	let c = col(".")
-	%s/\s\+$//e
-	call cursor(l, c)
-endfunction
-
-autocmd FileType javascript,php,python,sh,css,html,xml autocmd BufWritePre <buffer> :call <SID>TrimTrailingWhitespace()
-
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType php set comments=sr:/*,mb:*,ex:*/,://
 autocmd FileType php,javascript,python set formatoptions=croqn1
-
 
 " }}}
 " Mappings {{{
@@ -111,26 +99,6 @@ autocmd FileType php,javascript vnoremap <Leader>j :Tabular multiple_spaces<CR>
 " Align on =
 nnoremap <Leader>= :Tabular /=<CR>
 vnoremap <Leader>= :Tabular /=<CR>
-
-" Change single-line parenthesized group into multiple, indented lines
-"
-" (<expr>)  =>  (
-"                   <expr>
-"               )
-"
-" TODO: Also split up arguments on multiple lines
-nnoremap <Leader>i [(a<CR><C-t><Esc>])i<CR><C-d><Esc>k$
-
-" Move chained function call to new line ("c" indents, "C" does not)
-"
-" .one().two().three(<expr>)  =>  <Leader>c  =>  .one().two()
-"    Cursor here ^                                   .three(<expr>)
-"
-" .one()                      =>  <Leader>C  =>  .one()
-"     .two().three(<expr>)                           .two()
-"    Cursor here ^                                   .three(<expr>)
-nnoremap <Leader>c F.i<CR><Esc>%V%>%
-nnoremap <Leader>C F.i<CR><Esc>%
 
 " Write with sudo
 cnoremap w!! w !sudo tee % > /dev/null
