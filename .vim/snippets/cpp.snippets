@@ -1,0 +1,31 @@
+extends c-like
+
+snippet f "For loop" b
+for (int ${1:i} = ${2:0}; ${3:/* condition */}; $1++)
+{
+	${4:/* code */}
+}
+endsnippet
+
+snippet h "Arrow" i
+->$1
+endsnippet
+
+snippet H "This" i
+this->$1
+endsnippet
+
+snippet fn "Function" b
+${1:/* type */} ${2:/* function name */}($3)
+{
+	$4
+}
+endsnippet
+
+snippet F "false"
+false
+endsnippet
+
+snippet T "true"
+true
+endsnippet
