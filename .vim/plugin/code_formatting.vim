@@ -91,12 +91,35 @@ endfunction
 
 nnoremap <Leader>c :call <SID>FormatChainedCall()<CR>
 
-" Vertically align text with the opening parenthesis, using spaces.
-"
-" Supports visual mode to align multiple lines.
+" Vertically align to the given column all lines in the given range (inclusive).
 "
 " TODO: Doesn't handle blank lines very well
 " TODO: Should match indentation of beginning line
+function! s:VerticalAlign(column, first_line, last_line)
+	let done = 0
+
+	execute ':' a:first_line
+
+	while !done
+		while virtcol('.') > a:column
+			normal hx
+		endwhile
+
+		while virtcol('.') < a:column
+			execute "normal i \<Esc>^"
+		endwhile
+
+		if line('.') != a:last_line
+			normal j^
+		else
+			let done = 1
+		endif
+	endwhile
+endfunction
+
+" Vertically align text with the opening parenthesis, using spaces.
+"
+" Supports visual mode to align multiple lines.
 "
 " Examples
 " ------------------------------------------------------------------------------
@@ -131,26 +154,7 @@ function! <SID>FormatVerticalAlign() range
 	endif
 
 	if CursorChar() == '('
-		let dest_column = virtcol('.') + 1
-		let done = 0
-
-		execute ':' a:firstline
-
-		while !done
-			while virtcol('.') > dest_column
-				normal hx
-			endwhile
-
-			while virtcol('.') < dest_column
-				execute "normal i \<Esc>^"
-			endwhile
-
-			if line('.') != a:lastline
-				normal j^
-			else
-				let done = 1
-			endif
-		endwhile
+		call s:VerticalAlign(virtcol('.') + 1, a:firstline, a:lastline)
 
 		normal ])
 
@@ -160,12 +164,37 @@ function! <SID>FormatVerticalAlign() range
 	else
 		echom "Not in a parenthesized group"
 	endif
-
-	execute ":" a:lastline
 endfunction
 
 nnoremap <Leader>v :call <SID>FormatVerticalAlign()<CR>
 vnoremap <Leader>v :call <SID>FormatVerticalAlign()<CR>
+
+" Vertically align text with "--".
+"
+" This is mainly for Python documentation of the form:
+"
+" some_variable_name -- short description
+"
+" Examples
+" ------------------------------------------------------------------------------
+" variable -- multi  =>  variable -- multi
+" line                               line
+"   ^
+" ------------------------------------------------------------------------------
+function! <SID>FormatVerticalAlignDoubleDash() range
+	let matched = search("^\\s*[a-zA-Z0-9()_-]\\+ -- ", "beW")
+
+	if matched > 0
+		call s:VerticalAlign(virtcol('.') + 1, a:firstline, a:lastline)
+		execute ':' a:lastline
+		normal $
+	else
+		echom "Not found"
+	endif
+endfunction
+
+nnoremap <Leader>V :call <SID>FormatVerticalAlignDoubleDash()<CR>
+vnoremap <Leader>V :call <SID>FormatVerticalAlignDoubleDash()<CR>
 
 " Wrap a condition after a conditional or loop declaration.  Intended for Python
 " code, but may have other uses.
