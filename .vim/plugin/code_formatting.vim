@@ -93,6 +93,11 @@ nnoremap <Leader>c :call <SID>FormatChainedCall()<CR>
 
 " Vertically align text with the opening parenthesis, using spaces.
 "
+" Supports visual mode to align multiple lines.
+"
+" TODO: Doesn't handle blank lines very well
+" TODO: Should match indentation of beginning line
+"
 " Examples
 " ------------------------------------------------------------------------------
 " something(multi     =>  something(multi
@@ -117,7 +122,7 @@ nnoremap <Leader>c :call <SID>FormatChainedCall()<CR>
 " line), b).outside                      line), b).outside
 "              ^
 " ------------------------------------------------------------------------------
-function! <SID>FormatVerticalAlign()
+function! <SID>FormatVerticalAlign() range
 	normal [(
 
 	if CursorChar() != '('
@@ -126,15 +131,25 @@ function! <SID>FormatVerticalAlign()
 	endif
 
 	if CursorChar() == '('
-		let dest_column = col('.') + 1
-		normal ``^
+		let dest_column = virtcol('.') + 1
+		let done = 0
 
-		while col('.') > dest_column
-			normal hx
-		endwhile
+		execute ':' a:firstline
 
-		while col('.') < dest_column
-			execute "normal i \<Esc>^"
+		while !done
+			while virtcol('.') > dest_column
+				normal hx
+			endwhile
+
+			while virtcol('.') < dest_column
+				execute "normal i \<Esc>^"
+			endwhile
+
+			if line('.') != a:lastline
+				normal j^
+			else
+				let done = 1
+			endif
 		endwhile
 
 		normal ])
@@ -145,9 +160,12 @@ function! <SID>FormatVerticalAlign()
 	else
 		echom "Not in a parenthesized group"
 	endif
+
+	execute ":" a:lastline
 endfunction
 
 nnoremap <Leader>v :call <SID>FormatVerticalAlign()<CR>
+vnoremap <Leader>v :call <SID>FormatVerticalAlign()<CR>
 
 " Wrap a condition after a conditional or loop declaration.  Intended for Python
 " code, but may have other uses.
