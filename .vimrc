@@ -111,6 +111,7 @@ Arpeggio cnoremap jk <C-c>
 
 Arpeggio inoremap kl <Esc>:call UltiSnips_JumpForwards()<CR>
 Arpeggio inoremap df <C-n>
+Arpeggio inoremap sd <C-p>
 
 " }}}
 " Plugin settings {{{
