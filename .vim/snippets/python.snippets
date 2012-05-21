@@ -1,6 +1,15 @@
 extends brackets
 extends shorthand_arrays
 
+# Import
+snippet im "import ..." b
+import ${1:module}
+endsnippet
+
+snippet fi "from ... import ..." b
+from ${1:module} import ${2:imports}
+endsnippet
+
 # Strings
 snippet d
 """$1"""
