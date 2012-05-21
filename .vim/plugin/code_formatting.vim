@@ -215,3 +215,35 @@ function! <SID>FormatWrapCondition()
 endfunction
 
 nnoremap <Leader>w :call <SID>FormatWrapCondition()<CR>
+
+" Change a single-line Python docstring into a multline docstring.
+"
+" Examples
+" ------------------------------------------------------------------------------
+" """Doc"""  =>  """
+"    ^           Doc
+"                """
+" """Doc     =>  """
+"    ^           Doc
+" Doc"""     =>  Doc
+"   ^            """
+" ------------------------------------------------------------------------------
+function! <SID>FormatMultilineDocstring()
+	let line = getline('.')
+	let start_match = match(line, "^[\s\t]*\\(\"\"\"\\|'''\\)")
+	let end_match = match(line, "\\(\"\"\"\\|'''\\)$")
+
+	if start_match != -1
+		execute "normal ^wi\<CR>\<Esc>"
+	endif
+
+	if end_match != -1
+		execute "normal $bi\<CR>\<Esc>k"
+	endif
+
+	if start_match != -1 || end_match != -1
+		normal $
+	endif
+endfunction
+
+nnoremap <Leader>d :call <SID>FormatMultilineDocstring()<CR>

@@ -61,7 +61,7 @@ nnoremap <Leader>x :so %<CR>
 
 nnoremap <Leader>f :NERDTreeToggle<CR>
 nnoremap <Leader>F :NERDTreeMirror<CR>
-nnoremap <Leader>d :TagbarToggle<CR>
+nnoremap <Leader>t :TagbarToggle<CR>
 
 nnoremap <Leader>g :IndentGuidesToggle<CR>
 
