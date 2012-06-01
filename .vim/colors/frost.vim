@@ -35,8 +35,11 @@ hi Error        ctermfg=9   ctermbg=52
 hi ErrorMsg     ctermfg=9   ctermbg=52
 
 " Miscellaneous
-hi Comment      ctermfg=240
-hi Todo         ctermfg=201 ctermbg=54
+hi Comment        ctermfg=240
+hi CommentSummary ctermfg=60
+hi CommentProp    ctermfg=23
+hi CommentHeading ctermfg=24
+hi Todo           ctermfg=201 ctermbg=54
 
 " Normal text color
 hi cssAuralAttr            ctermfg=249
