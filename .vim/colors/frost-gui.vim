@@ -10,11 +10,34 @@ endif
 
 let g:colors_name = "frost-gui"
 
+" Interface
+hi ColorColumn  guibg=#0f1214 guisp=#0f1214
+hi CursorColumn guibg=#0f1214 guisp=#0f1214
+hi CursorLine   guibg=#0f1214 guisp=#0f1214
+hi LineNr       guifg=#283340 guibg=#0f1214 guisp=#0f1214
+hi VertSplit    guifg=#161a1f guibg=#161a1f guisp=#161a1f
+
+" Generic
+hi Special guifg=#7d8c99
+hi Title   guifg=#d18d34 gui=bold
+
+" Comment
+hi Comment guifg=#465457
+
+" Markdown
+hi markdownH1               guifg=#d18d34 gui=bold
+hi markdownH2               guifg=#d18d34
+hi markdownH3               guifg=#7d8c99 gui=bold
+hi markdownH4               guifg=#7d8c99
+hi markdownH5               guifg=#283340 gui=bold
+hi markdownH6               guifg=#283340
+hi markdownHeadingRule      guifg=#8c6f49 gui=bold
+hi markdownHeadingDelimiter guifg=#283340 gui=bold
+
+
 hi Boolean                 guifg=#5ca3c4 guibg=NONE    guisp=NONE    gui=NONE
 hi Character               guifg=#87d7ff guibg=NONE    guisp=NONE    gui=NONE
 hi Character               guifg=#a3a67c guibg=NONE    guisp=NONE    gui=NONE
-hi ColorColumn             guifg=NONE    guibg=#0f1214 guisp=#0f1214 gui=NONE
-hi Comment                 guifg=#465457 guibg=NONE    guisp=NONE    gui=NONE
 hi Constant                guifg=#5ca3c4 guibg=NONE    guisp=NONE    gui=NONE
 hi cssAttributeSelector    guifg=#7ca67f guibg=NONE    guisp=NONE    gui=NONE
 hi cssBoxAttr              guifg=#5ca3c4 guibg=NONE    guisp=NONE    gui=NONE
@@ -37,8 +60,6 @@ hi cssTextProp             guifg=#c4b8a8 guibg=NONE    guisp=NONE    gui=NONE
 hi cssUIAttr               guifg=#5ca3c4 guibg=NONE    guisp=NONE    gui=NONE
 hi cssUIProp               guifg=#c4b8a8 guibg=NONE    guisp=NONE    gui=NONE
 hi Cursor                  guifg=#000000 guibg=#e09431 guisp=#e09431 gui=NONE
-hi CursorColumn            guifg=NONE    guibg=#0f1214 guisp=#0f1214 gui=NONE
-hi CursorLine              guifg=NONE    guibg=#0f1214 guisp=#0f1214 gui=NONE
 hi DiffAdd                 guifg=#47d16a guibg=#0f1a0f guisp=#0f1a0f gui=NONE
 hi DiffAdded               guifg=#47d16a guibg=#0f1a0f guisp=#0f1a0f gui=NONE
 hi DiffChange              guifg=#bdbd40 guibg=#14140e guisp=#14140e gui=NONE
@@ -73,7 +94,6 @@ hi javascriptOperator      guifg=#d18d34 guibg=NONE    guisp=NONE    gui=NONE
 hi javascriptParens        guifg=#7d8c99 guibg=NONE    guisp=NONE    gui=NONE
 hi javascriptRegexpString  guifg=#957ca6 guibg=NONE    guisp=NONE    gui=NONE
 hi javascriptRepeat        guifg=#d1a975 guibg=NONE    guisp=NONE    gui=NONE
-hi LineNr                  guifg=#283340 guibg=#0f1214 guisp=#0f1214 gui=NONE
 hi MatchParen              guifg=#d9b446 guibg=#4d361a guisp=#4d361a gui=bold
 hi ModeMsg                 guifg=#505761 guibg=NONE    guisp=NONE    gui=NONE
 hi MoreMsg                 guifg=#5fd7ff guibg=NONE    guisp=NONE    gui=NONE
@@ -114,7 +134,6 @@ hi pythonRepeat            guifg=#d1a975 guibg=NONE    guisp=NONE    gui=NONE
 hi pythonStatement         guifg=#d18d34 guibg=NONE    guisp=NONE    gui=NONE
 hi Question                guifg=#ba9052 guibg=NONE    guisp=NONE    gui=NONE
 hi Search                  guifg=#af8700 guibg=NONE    guisp=NONE    gui=underline
-hi Special                 guifg=#7d8c99 guibg=NONE    guisp=NONE    gui=NONE
 hi SpecialKey              guifg=#283340 guibg=NONE    guisp=NONE    gui=NONE
 hi SpellBad                guifg=#d13636 guibg=NONE    guisp=NONE    gui=undercurl
 hi SpellCap                guifg=#d1c736 guibg=NONE    guisp=NONE    gui=undercurl
@@ -127,10 +146,8 @@ hi String                  guifg=#a3a67c guibg=NONE    guisp=NONE    gui=NONE
 hi TabLine                 guifg=#505761 guibg=#161a1f guisp=#161a1f gui=NONE
 hi TabLineFill             guifg=#283340 guibg=#0f1214 guisp=#0f1214 gui=NONE
 hi TabLineSel              guifg=#596880 guibg=#252e40 guisp=#252e40 gui=NONE
-hi Title                   guifg=#db8246 guibg=NONE    guisp=NONE    gui=bold
 hi Todo                    guifg=#ff9d00 guibg=#423026 guisp=#423026 gui=NONE
 hi Type                    guifg=#7ca67f guibg=NONE    guisp=NONE    gui=NONE
-hi VertSplit               guifg=#161a1f guibg=#161a1f guisp=#161a1f gui=NONE
 hi Visual                  guifg=NONE    guibg=#7a472d guisp=#7a472d gui=NONE
 hi VisualNOS               guifg=NONE    guibg=#7a472d guisp=#7a472d gui=NONE
 hi WarningMsg              guifg=#ff5f00 guibg=NONE    guisp=NONE    gui=NONE
