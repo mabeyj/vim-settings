@@ -4,6 +4,7 @@ Helptags
 
 " Basic Vim settings {{{
 
+set t_Co=256
 set incsearch mouse=a number showcmd
 set autoindent tabstop=4 shiftwidth=4
 set listchars=tab:▹—,trail:$,extends:>,precedes:<,eol:¬,nbsp:·
@@ -20,6 +21,8 @@ set colorcolumn=81              " Highlight long lines
 
 set statusline=%f\ %m%h%r%w\ %y\ %{fugitive#statusline()}%=\ B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P
 set rulerformat=%45(%=B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P%)
+
+syntax on
 
 " }}}
 " Gvim options {{{
