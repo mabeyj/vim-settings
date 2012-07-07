@@ -40,10 +40,10 @@ syntax region pythonDocstringPropSection contained transparent
 	\ end=+'''\|"""+he=e-3
 
 syntax match pythonDocstringProp contained 
-	\ "^\s*\w\+\(()\)\?\ze -- "
+	\ "^\s*\zs\w\+\(()\)\?\ze -- "
 
 syntax match pythonDocstringHeading contained
-	\ "^\s*\(\w\|\s\)\+:"
+	\ "^\s*\zs\(\w\|\s\)\+:"
 
 " Fix cases where highlighting for docstring properties does not update
 syntax sync linebreaks=1
