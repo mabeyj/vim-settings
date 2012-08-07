@@ -247,3 +247,6 @@ function! <SID>FormatMultilineDocstring()
 endfunction
 
 nnoremap <Leader>d :call <SID>FormatMultilineDocstring()<CR>
+
+" Sort properties in a CSS block.
+nnoremap <Leader>s Vi{:sort<CR>``
