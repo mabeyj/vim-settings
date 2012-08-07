@@ -1,0 +1,190 @@
+snippet r "Rule set" b
+${1:selector}
+{
+	${2:/* properties */}
+}
+endsnippet
+
+snippet p "Property" b
+${1:/* name */}: ${2:/* value */};
+endsnippet
+
+# Values
+
+snippet u "url(), unquoted"
+url($1)
+endsnippet
+
+snippet uu "url(), quoted"
+url("$1")
+endsnippet
+
+# Properties
+
+snippet c "color" b
+color: ${1:/* colour */};
+endsnippet
+
+# Borders -- b[trbl][csw]
+
+snippet b "border" b
+border: ${1:/* width style colour */};
+endsnippet
+
+snippet bc "border-color" b
+border-color: ${1:/* colour ... */};
+endsnippet
+
+snippet bs "border-style" b
+border-style: ${1:/* style ... */};
+endsnippet
+
+snippet bw "border-width" b
+border-width: ${1:/* width ... */};
+endsnippet
+
+snippet bt "border-top" b
+border-top: ${1:/* width style colour */};
+endsnippet
+
+snippet btc "border-top-color" b
+border-top-color: ${1:/* colour */};
+endsnippet
+
+snippet bts "border-top-style" b
+border-top-style: ${1:/* style */};
+endsnippet
+
+snippet btw "border-top-width" b
+border-top-width: ${1:/* width */};
+endsnippet
+
+snippet br "border-right" b
+border-right: ${1:/* width style colour */};
+endsnippet
+
+snippet brc "border-right-color" b
+border-right-color: ${1:/* colour */};
+endsnippet
+
+snippet brs "border-right-style" b
+border-right-style: ${1:/* style */};
+endsnippet
+
+snippet brw "border-right-width" b
+border-right-width: ${1:/* width */};
+endsnippet
+
+snippet bb "border-bottom" b
+border-bottom: ${1:/* width style colour */};
+endsnippet
+
+snippet bbc "border-bottom-color" b
+border-bottom-color: ${1:/* colour */};
+endsnippet
+
+snippet bbs "border-bottom-style" b
+border-bottom-style: ${1:/* style */};
+endsnippet
+
+snippet bbw "border-bottom-width" b
+border-bottom-width: ${1:/* width */};
+endsnippet
+
+snippet bl "border-left" b
+border-left: ${1:/* width style colour */};
+endsnippet
+
+snippet blc "border-left-color" b
+border-left-color: ${1:/* colour */};
+endsnippet
+
+snippet bls "border-left-style" b
+border-left-style: ${1:/* style */};
+endsnippet
+
+snippet blw "border-left-width" b
+border-left-width: ${1:/* width */};
+endsnippet
+
+# Background -- g[ciraplos]
+
+snippet g "background" b
+background: ${1:/* image position / size repeat attachment box, ... colour */};
+endsnippet
+
+snippet gc "background-color" b
+background-color: ${1:/* colour */};
+endsnippet
+
+snippet gi "background-image" b
+background-image: ${1:/* image */};
+endsnippet
+
+snippet gr "background-repeat" b
+background-repeat: ${1:/* repeat */};
+endsnippet
+
+snippet ga "background-attachment" b
+background-attachment: ${1:/* attachment */}
+endsnippet
+
+snippet gp "background-position" b
+background-position: ${1:/* position ... */};
+endsnippet
+
+snippet gl "background-clip" b
+background-clip: ${1:/* box */};
+endsnippet
+
+snippet go "background-origin" b
+background-origin: ${1:/* box */};
+endsnippet
+
+snippet gs "background-size" b
+background-size: ${1:/* size ... */};
+endsnippet
+
+# Padding -- d[trbl]
+
+snippet d "padding" b
+padding: ${1:/* width ... */};
+endsnippet
+
+snippet dt "padding-top" b
+padding-top: ${1:/* width */};
+endsnippet
+
+snippet dr "padding-right" b
+padding-right: ${1:/* width */};
+endsnippet
+
+snippet db "padding-bottom" b
+padding-bottom: ${1:/* width */};
+endsnippet
+
+snippet dl "padding-left" b
+padding-left: ${1:/* width */};
+endsnippet
+
+# Margin -- m[trbl]
+
+snippet m "margin" b
+margin: ${1:/* width ... */};
+endsnippet
+
+snippet mt "margin-top" b
+margin-top: ${1:/* width */};
+endsnippet
+
+snippet mr "margin-right" b
+margin-right: ${1:/* width */};
+endsnippet
+
+snippet mb "margin-bottom" b
+margin-bottom: ${1:/* width */};
+endsnippet
+
+snippet ml "margin-left" b
+margin-left: ${1:/* width */};
+endsnippet
