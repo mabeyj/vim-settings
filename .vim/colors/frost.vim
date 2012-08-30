@@ -36,9 +36,9 @@ hi ErrorMsg     ctermfg=9   ctermbg=52
 
 " Miscellaneous
 hi Comment        ctermfg=240
-hi CommentSummary ctermfg=60
-hi CommentProp    ctermfg=23
-hi CommentHeading ctermfg=24
+hi CommentSummary ctermfg=243
+hi CommentProp    ctermfg=238
+hi CommentHeading ctermfg=238 cterm=bold
 hi Todo           ctermfg=201 ctermbg=54
 
 " Normal text color
