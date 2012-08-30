@@ -52,3 +52,6 @@ highlight link pythonDocstring Comment
 highlight link pythonDocstringFirstLine CommentSummary
 highlight link pythonDocstringProp CommentProp
 highlight link pythonDocstringHeading CommentHeading
+highlight link CommentSummary Comment
+highlight link CommentProp Comment
+highlight link CommentHeading Comment
