@@ -1,7 +1,7 @@
 syntax region pythonDocstring
 	\ contains=pythonDocstringFirstLine,pythonDocstringPropSection
 	\ start=+^\s*[uU]\?\z('''\|"""\)+
-	\ end="\z1\s*$"
+	\ end="\z1"
 
 " FIXME: You can "nest" docstrings and it will still highlight the first line
 " of the inner docstring
