@@ -26,6 +26,23 @@ snippet T "Block element" i
 </`!p snip.rv = t[1].split(' ', 2)[0]`>
 endsnippet
 
+snippet u "Unclosed element" i
+<${1:tag}>
+endsnippet
+
+snippet s "Self-closing element" i
+<${1:tag} />
+endsnippet
+
+# Attributes
 snippet a "Attribute"
 ${1:attr}="$2"
+endsnippet
+
+snippet c "class attribute"
+class="$1"
+endsnippet
+
+snippet i "id attribute"
+id="$1"
 endsnippet
