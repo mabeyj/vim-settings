@@ -34,16 +34,16 @@ syntax region pythonDocstringFirstLine contained
 " end: any unskipped line or just before ending docstring
 syntax region pythonDocstringPropSection contained transparent
 	\ contains=pythonDocstringProp,pythonDocstringHeading,@Spell
-	\ start="^\z(\s*\)\(\w\|\s\)\+:\n\s*\w\+\(()\)\? -- \w"
-	\ skip="^\(\z1\(\w\+\(()\)\? -- \|\s\+\)\|$\)"
+	\ start="^\z(\s*\).\+:\n\s*\(\w\|*\)\+\(()\)\? -- \w"
+	\ skip="^\(\z1\(\(\w\|*\)\+\(()\)\? -- \|\s\+\)\|$\)"
 	\ end="^"
 	\ end=+'''\|"""+he=e-3
 
 syntax match pythonDocstringProp contained 
-	\ "^\s*\zs\w\+\(()\)\?\ze -- "
+	\ "^\s*\zs\(\w\|*\)\+\(()\)\?\ze -- "
 
 syntax match pythonDocstringHeading contained
-	\ "^\s*\zs\(\w\|\s\)\+:"
+	\ "^\s*\zs.\+:"
 
 " Fix cases where highlighting for docstring properties does not update
 syntax sync linebreaks=1
