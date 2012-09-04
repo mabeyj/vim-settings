@@ -1,5 +1,5 @@
-syntax region pythonDocstring
-	\ contains=pythonDocstringFirstLine,pythonDocstringPropSection
+syntax region pythonDocstring keepend
+	\ contains=pythonDocstringFirstLine,pythonDocstringPropSection,@Spell
 	\ start=+^\s*[uU]\?\z('''\|"""\)+
 	\ end="\z1"
 
@@ -33,7 +33,7 @@ syntax region pythonDocstringFirstLine contained
 "       (i.e., continuation of property description) OR an empty line
 " end: any unskipped line or just before ending docstring
 syntax region pythonDocstringPropSection contained transparent
-	\ contains=pythonDocstringProp,pythonDocstringHeading
+	\ contains=pythonDocstringProp,pythonDocstringHeading,@Spell
 	\ start="^\z(\s*\)\(\w\|\s\)\+:\n\s*\w\+\(()\)\? -- \w"
 	\ skip="^\(\z1\(\w\+\(()\)\? -- \|\s\+\)\|$\)"
 	\ end="^"
