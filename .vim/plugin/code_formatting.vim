@@ -238,7 +238,7 @@ function! <SID>FormatMultilineDocstring()
 	endif
 
 	if end_match != -1
-		execute "normal $bi\<CR>\<Esc>k"
+		execute "normal $3ha\<CR>\<Esc>k"
 	endif
 
 	if start_match != -1 || end_match != -1
