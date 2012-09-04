@@ -7,6 +7,9 @@ endif
 " if the key is a single- or double-quoted string.
 AddTabularPattern! php_key /^\s*\('\(\\'\|[^']\)*'\|"\(\\"\|[^"]\)*"\|.*\)\s*\zs=>/
 
+" Align on first "="
+AddTabularPattern! equals /^[^=]*\zs=/
+
 " Align JavaScript key/value pairs, but don't line up every ":" separator (i.e.,
 " ":" inside a key or value).
 "

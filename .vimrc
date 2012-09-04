@@ -100,8 +100,8 @@ autocmd FileType php,javascript nnoremap <Leader>j :Tabular multiple_spaces<CR>
 autocmd FileType php,javascript vnoremap <Leader>j :Tabular multiple_spaces<CR>
 
 " Align on =
-nnoremap <Leader>= :Tabular /=<CR>
-vnoremap <Leader>= :Tabular /=<CR>
+nnoremap <Leader>= :Tabular equals<CR>
+vnoremap <Leader>= :Tabular equals<CR>
 
 " Write with sudo
 cnoremap w!! w !sudo tee % > /dev/null
