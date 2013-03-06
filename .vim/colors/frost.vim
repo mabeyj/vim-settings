@@ -113,3 +113,6 @@ hi diffAdded   ctermfg=84 ctermbg=22
 hi DiffChange  ctermfg=228 ctermbg=58
 hi DiffDelete  ctermfg=161 ctermbg=52
 hi diffRemoved ctermfg=161 ctermbg=52
+
+" Fix Git Gutter colours
+hi clear SignColumn
