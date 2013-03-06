@@ -109,15 +109,16 @@ vnoremap <Leader>= :Tabular equals<CR>
 " Write with sudo
 cnoremap w!! w !sudo tee % > /dev/null
 
-" Hit jk at same time to trigger Esc
+" Chording
 call arpeggio#load()
-Arpeggio noremap jk <Esc>
-Arpeggio inoremap jk <Esc>
-Arpeggio cnoremap jk <C-c>
 
-Arpeggio inoremap kl <Esc>:call UltiSnips_JumpForwards()<CR>
-Arpeggio inoremap df <C-n>
-Arpeggio inoremap sd <C-p>
+Arpeggio noremap ne <Esc>
+Arpeggio inoremap ne <Esc>
+Arpeggio cnoremap ne <C-c>
+
+Arpeggio inoremap ei <Esc>:call UltiSnips_JumpForwards()<CR>
+Arpeggio inoremap st <C-n>
+Arpeggio inoremap rs <C-p>
 
 " }}}
 " Plugin settings {{{
