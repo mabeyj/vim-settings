@@ -5,7 +5,7 @@ Helptags
 " Basic Vim settings {{{
 
 set t_Co=256
-set incsearch mouse=a number showcmd
+set incsearch number showcmd
 set autoindent tabstop=4 shiftwidth=4
 set listchars=tab:▹—,trail:$,extends:>,precedes:<,eol:¬,nbsp:·
 
