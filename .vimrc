@@ -110,6 +110,7 @@ vnoremap <Leader>= :Tabular equals<CR>
 cnoremap w!! w !sudo tee % > /dev/null
 
 " Chording
+let g:arpeggio_timeoutlen=20
 call arpeggio#load()
 
 Arpeggio noremap ne <Esc>
