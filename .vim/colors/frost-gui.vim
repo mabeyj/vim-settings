@@ -23,6 +23,9 @@ hi Title   guifg=#d18d34 gui=bold
 
 " Comment
 hi Comment guifg=#465457
+hi CommentSummary          guifg=#658c94
+hi CommentProp             guifg=#5b6e73
+hi CommentHeading          guifg=#658c94
 
 " Markdown
 hi markdownH1               guifg=#d18d34 gui=bold
@@ -36,7 +39,6 @@ hi markdownHeadingDelimiter guifg=#283340 gui=bold
 
 
 hi Boolean                 guifg=#5ca3c4 guibg=NONE    guisp=NONE    gui=NONE
-hi Character               guifg=#87d7ff guibg=NONE    guisp=NONE    gui=NONE
 hi Character               guifg=#a3a67c guibg=NONE    guisp=NONE    gui=NONE
 hi Constant                guifg=#5ca3c4 guibg=NONE    guisp=NONE    gui=NONE
 hi cssAttributeSelector    guifg=#7ca67f guibg=NONE    guisp=NONE    gui=NONE
