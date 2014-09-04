@@ -59,6 +59,12 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType php set comments=sr:/*,mb:*,ex:*/,://
 autocmd FileType php,javascript,python set formatoptions=croqn1
 
+" Default Python plugin overrides your tab settings now
+autocmd FileType python set tabstop=4 noexpandtab
+
+" SCSS is close enough to LESS, which doesn't have default syntax highlighting
+autocmd BufNewFile,BufRead *.less set filetype=scss
+
 " }}}
 " Mappings {{{
 
