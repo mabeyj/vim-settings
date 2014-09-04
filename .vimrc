@@ -117,7 +117,7 @@ Arpeggio noremap ne <Esc>
 Arpeggio inoremap ne <Esc>
 Arpeggio cnoremap ne <C-c>
 
-Arpeggio inoremap ei <Esc>:call UltiSnips_JumpForwards()<CR>
+Arpeggio inoremap ei <Esc>:call UltiSnips#JumpForwards()<CR>
 Arpeggio inoremap st <C-n>
 Arpeggio inoremap rs <C-p>
 
@@ -144,8 +144,5 @@ let NERDTreeIgnore=['\.pyc$', '^__pycache__$']
 
 " Sparkup
 let g:sparkupNextMapping='<C-B>'     " Prevent conflict with Vim's autocomplete
-
-" UltiSnips
-let g:UltiSnipsSnippetDirectories=["snippets"]
 
 " }}}
