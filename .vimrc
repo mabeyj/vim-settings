@@ -77,8 +77,10 @@ nnoremap <Leader>f :NERDTreeToggle<CR>
 nnoremap <Leader>F :NERDTreeMirror<CR>
 nnoremap <Leader>T :TagbarToggle<CR>
 
-nnoremap <Leader>g :IndentGuidesToggle<CR>
+nnoremap <Leader>i :IndentGuidesToggle<CR>
+nnoremap <Leader>g :GitGutterToggle<CR>
 
+nnoremap <Leader>l :set list!<CR>
 nnoremap <Leader><Leader> :set spell!<CR>
 
 iabbrev #D <C-r>=strftime("%F %I:%M %p")<CR>
