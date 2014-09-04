@@ -11,13 +11,15 @@ set listchars=tab:▹—,trail:$,extends:>,precedes:<,eol:¬,nbsp:·
 
 set copyindent                  " Preserve vertical alignment when indenting
 set scrolloff=3                 " Give more context when scrolling
-set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
-set wildmenu                    " Show keyword list of tab autocomplete
 set t_Co=256                    " Fix colour issues when running in tmux
 set formatoptions-=t            " Don't auto-wrap text everywhere
 
 set textwidth=80
 set colorcolumn=81              " Highlight long lines
+
+set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
+set wildmenu                    " Show keyword list of tab autocomplete
+set wildignore+=*.pyc,env*/**,build/**,node_modules
 
 set statusline=%f\ %m%h%r%w\ %y\ %{fugitive#statusline()}%=\ B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P
 set rulerformat=%45(%=B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P%)
