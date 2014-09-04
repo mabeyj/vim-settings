@@ -1,0 +1,100 @@
+extends brackets
+
+# Import URLs
+# ------------------------------------------------------------------------------
+
+snippet igoconvey "Import goconvey" b
+. "github.com/smartystreets/goconvey/convey"
+endsnippet
+
+snippet isqlmock "Import sqlmock" b
+sqlmock "github.com/DATA-DOG/go-sqlmock"
+endsnippet
+
+# Comments
+# ------------------------------------------------------------------------------
+
+snippet d "Doc comment" b
+// $0
+endsnippet
+
+# Functions
+# ------------------------------------------------------------------------------
+
+snippet fn "Function declaration" b
+func $1($2) $3 {
+	$4
+}
+endsnippet
+
+snippet afn "Anonymous function declaration" w
+func($1) $2 {
+	$3
+}
+endsnippet
+
+snippet rfn "Receiver function declaration" b
+func ($1) $2($3) $4 {
+	$5
+}
+endsnippet
+
+# Keywords
+# ------------------------------------------------------------------------------
+
+snippet r "Return" b
+return $1
+endsnippet
+
+# If-else flow
+# ------------------------------------------------------------------------------
+
+snippet i "If block" b
+if $1 {
+	$2
+}
+endsnippet
+
+snippet ie "If block with error check" b
+if $1, err := $2; err != nil {
+	$3
+}
+endsnippet
+
+snippet e "If-else block" b
+if $1 {
+	$2
+} else {
+	$3
+}
+endsnippet
+
+# Loops
+# ------------------------------------------------------------------------------
+
+snippet w "While loop" b
+for $1 {
+	$2
+}
+endsnippet
+
+# Testing
+# ------------------------------------------------------------------------------
+
+snippet tfn "Testing function" b
+func Test$1(t *testing.T) {
+	$2
+}
+endsnippet
+
+snippet c "Convey block" b
+Convey("$1", func() {
+	$2
+})
+endsnippet
+
+snippet ct "Top-level convey block" b
+Convey("$1", t, func() {
+	$2
+})
+endsnippet
