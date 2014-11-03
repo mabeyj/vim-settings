@@ -19,7 +19,7 @@ set colorcolumn=81              " Highlight long lines
 
 set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
 set wildmenu                    " Show keyword list of tab autocomplete
-set wildignore+=*.pyc,env*/**,build/**,node_modules
+set wildignore+=*.pyc,env*/**,build/**,node_modules,bower_components,bundle
 
 set statusline=%f\ %m%h%r%w\ %y\ %{fugitive#statusline()}%=\ B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P
 set rulerformat=%45(%=B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P%)
