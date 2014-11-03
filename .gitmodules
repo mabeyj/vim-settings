@@ -10,9 +10,6 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar.git
-[submodule "submodules/sunburst"]
-	path = submodules/sunburst
-	url = https://github.com/gigamo/sunburst.vim.git
 [submodule ".vim/bundle/addon-mw-utils"]
 	path = .vim/bundle/addon-mw-utils
 	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
@@ -61,3 +58,12 @@
 [submodule ".vim/bundle/go"]
 	path = .vim/bundle/go
 	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/bundle/jellybeans"]
+	path = .vim/bundle/jellybeans
+	url = git@github.com:nanotech/jellybeans.vim.git
+[submodule ".vim/bundle/sunburst"]
+	path = .vim/bundle/sunburst
+	url = git@github.com:sickill/vim-sunburst.git
+[submodule ".vim/bundle/gotham"]
+	path = .vim/bundle/gotham
+	url = git@github.com:whatyouhide/vim-gotham.git
