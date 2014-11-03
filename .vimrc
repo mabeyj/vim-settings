@@ -101,17 +101,6 @@ nnoremap c]B c]}
 " cleared and needs to be redrawn
 autocmd FileType php nnoremap K :silent !google-chrome http://php.net/<cword><CR>:redraw!<CR>
 
-" Align key/value pairs
-autocmd FileType php nnoremap <Leader>k :Tabular php_key<CR>
-autocmd FileType php vnoremap <Leader>k :Tabular php_key<CR>
-
-autocmd FileType javascript nnoremap <Leader>k :Tabular javascript_key<CR>
-autocmd FileType javascript vnoremap <Leader>k :Tabular javascript_key<CR>
-
-" Align doc comment @param descriptions
-autocmd FileType php,javascript nnoremap <Leader>j :Tabular multiple_spaces<CR>
-autocmd FileType php,javascript vnoremap <Leader>j :Tabular multiple_spaces<CR>
-
 " Align on =
 nnoremap <Leader>= :Tabular equals<CR>
 vnoremap <Leader>= :Tabular equals<CR>
