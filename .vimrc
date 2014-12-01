@@ -7,6 +7,7 @@ Helptags
 set t_Co=256
 set incsearch number showcmd
 set autoindent smartindent tabstop=4 shiftwidth=4 shiftround
+set linebreak breakindent showbreak=····
 set listchars=tab:▹—,trail:$,extends:>,precedes:<,eol:¬,nbsp:·
 
 set copyindent                  " Preserve vertical alignment when indenting
