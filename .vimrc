@@ -56,12 +56,8 @@ endif
 
 filetype plugin on
 
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType php set comments=sr:/*,mb:*,ex:*/,://
-autocmd FileType php,javascript,python set formatoptions=croqn1
-
-" Default Python plugin overrides your tab settings now
-autocmd FileType python set tabstop=4 noexpandtab
+autocmd FileType go,javascript,php,python set formatoptions=croqn1
 
 " SCSS is close enough to LESS, which doesn't have default syntax highlighting
 autocmd BufNewFile,BufRead *.less set filetype=scss
@@ -98,10 +94,6 @@ nnoremap c]b c])
 nnoremap c[B c[{
 nnoremap c]B c]}
 
-" Open documentation for current word -- for some reason, the screen gets
-" cleared and needs to be redrawn
-autocmd FileType php nnoremap K :silent !google-chrome http://php.net/<cword><CR>:redraw!<CR>
-
 " Align on =
 nnoremap <Leader>= :Tabular equals<CR>
 vnoremap <Leader>= :Tabular equals<CR>
@@ -123,6 +115,14 @@ Arpeggio inoremap rs <C-p>
 
 " }}}
 " Plugin settings {{{
+
+" Go
+let g:go_fmt_command = "goimports"
+let g:go_highlight_operators = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_build_constraints = 1
 
 " Indent guides
 let g:indent_guides_start_level=2

@@ -7,4 +7,4 @@ function! <SID>TrimTrailingWhitespace()
 	call cursor(l, c)
 endfunction
 
-autocmd FileType javascript,php,python,sh,css,html,xml autocmd BufWritePre <buffer> :call <SID>TrimTrailingWhitespace()
+autocmd FileType javascript,php,python,sh,css,scss,html,xml,markdown autocmd BufWritePre <buffer> :call <SID>TrimTrailingWhitespace()
