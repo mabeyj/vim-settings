@@ -7,9 +7,6 @@
 [submodule ".vim/bundle/indent-guides"]
 	path = .vim/bundle/indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
-[submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
-	url = git://github.com/majutsushi/tagbar.git
 [submodule ".vim/bundle/addon-mw-utils"]
 	path = .vim/bundle/addon-mw-utils
 	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
@@ -28,9 +25,6 @@
 [submodule "submodules/tomorrow"]
 	path = submodules/tomorrow
 	url = git://github.com/chriskempson/tomorrow-theme.git
-[submodule ".vim/bundle/vimwiki"]
-	path = .vim/bundle/vimwiki
-	url = git://github.com/vim-scripts/vimwiki.git
 [submodule ".vim/bundle/ultisnips"]
 	path = .vim/bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git

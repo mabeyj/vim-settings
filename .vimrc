@@ -133,10 +133,6 @@ let g:indent_guides_space_guides=0
 hi IndentGuidesOdd ctermbg=234
 hi IndentGuidesEven ctermbg=233
 
-" Tagbar
-let g:tagbar_autofocus=1
-let g:tagbar_autoclose=1
-
 " NERDTree
 let NERDTreeMouseMode=2
 let NERDTreeQuitOnOpen=1
