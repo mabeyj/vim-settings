@@ -2,7 +2,8 @@
 call pathogen#infect()
 Helptags
 
-" Basic Vim settings {{{
+" Basic Vim settings
+" ==============================================================================
 
 set t_Co=256
 set incsearch number showcmd
@@ -30,8 +31,8 @@ set backupdir=~/tmp//,/tmp//
 
 syntax on
 
-" }}}
-" Gvim options {{{
+" Gvim options
+" ==============================================================================
 
 set guifont=Liberation\ Mono\ 10
 set guioptions-=e
@@ -40,8 +41,8 @@ set guioptions-=T
 set guioptions-=L
 set guioptions-=m
 
-" }}}
-" Colour scheme {{{
+" Colour scheme
+" ==============================================================================
 
 set background=dark
 
@@ -51,8 +52,8 @@ else
 	color frost
 endif
 
-" }}}
-" Filetype-specific settings {{{
+" Filetype-specific settings
+" ==============================================================================
 
 filetype plugin on
 
@@ -62,8 +63,8 @@ autocmd FileType go,javascript,php,python set formatoptions=croqn1
 " SCSS is close enough to LESS, which doesn't have default syntax highlighting
 autocmd BufNewFile,BufRead *.less set filetype=scss
 
-" }}}
-" Mappings {{{
+" Mappings
+" ==============================================================================
 
 set pastetoggle=<Leader>p
 
@@ -113,8 +114,8 @@ Arpeggio inoremap ei <Esc>:call UltiSnips#JumpForwards()<CR>
 Arpeggio inoremap st <C-n>
 Arpeggio inoremap rs <C-p>
 
-" }}}
-" Plugin settings {{{
+" Plugin settings
+" ==============================================================================
 
 " Go
 let g:go_fmt_command = "goimports"
@@ -140,5 +141,3 @@ let NERDTreeIgnore=['\.pyc$', '^__pycache__$']
 
 " Sparkup
 let g:sparkupNextMapping='<C-B>'     " Prevent conflict with Vim's autocomplete
-
-" }}}
