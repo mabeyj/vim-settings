@@ -19,9 +19,6 @@
 [submodule ".vim/bundle/matchit"]
 	path = .vim/bundle/matchit
 	url = git://github.com/edsono/vim-matchit.git
-[submodule "submodules/tomorrow"]
-	path = submodules/tomorrow
-	url = git://github.com/chriskempson/tomorrow-theme.git
 [submodule ".vim/bundle/ultisnips"]
 	path = .vim/bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
@@ -37,24 +34,6 @@
 [submodule ".vim/bundle/go"]
 	path = .vim/bundle/go
 	url = https://github.com/fatih/vim-go.git
-[submodule ".vim/bundle/color-diablo3"]
-	path = .vim/bundle/color-diablo3
-	url = git://github.com/vim-scripts/Diablo3.git
-[submodule ".vim/bundle/color-solarized"]
-	path = .vim/bundle/color-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule ".vim/bundle/color-xoria256"]
-	path = .vim/bundle/color-xoria256
-	url = git://github.com/vim-scripts/xoria256.vim.git
-[submodule ".vim/bundle/color-jellybeans"]
-	path = .vim/bundle/color-jellybeans
-	url = git@github.com:nanotech/jellybeans.vim.git
-[submodule ".vim/bundle/color-sunburst"]
-	path = .vim/bundle/color-sunburst
-	url = git@github.com:sickill/vim-sunburst.git
-[submodule ".vim/bundle/color-gotham"]
-	path = .vim/bundle/color-gotham
-	url = git@github.com:whatyouhide/vim-gotham.git
 [submodule ".vim/bundle/go-impl"]
 	path = .vim/bundle/go-impl
 	url = git@github.com:rhysd/vim-go-impl.git
