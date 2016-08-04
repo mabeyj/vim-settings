@@ -56,13 +56,9 @@ set guioptions-=m
 " Colour scheme
 " ==============================================================================
 
+let base16colorspace=256
 set background=dark
-
-if has("gui_running")
-	color frost-gui
-else
-	color frost
-endif
+color base16-default
 
 " Filetype-specific settings
 " ==============================================================================
