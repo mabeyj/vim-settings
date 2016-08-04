@@ -5,16 +5,27 @@ Helptags
 " Basic Vim settings
 " ==============================================================================
 
-set t_Co=256
 set incsearch number showcmd
 set autoindent smartindent tabstop=4 shiftwidth=4 shiftround
 set linebreak breakindent showbreak=····
 set listchars=tab:▹—,trail:$,extends:>,precedes:<,eol:¬,nbsp:·
+set backspace=indent,eol,start
+set spell
 
+" Don't fully indent the whole line when typing "#" at the beginning of a line.
+set cinkeys-=0#
+set indentkeys-=0#
+
+set autoread                    " Reload changed, unmodified files automatically
 set copyindent                  " Preserve vertical alignment when indenting
 set scrolloff=3                 " Give more context when scrolling
-set t_Co=256                    " Fix colour issues when running in tmux
+set t_Co=256 t_ut=              " Fix colour issues when running in tmux
+
 set formatoptions-=t            " Don't auto-wrap text everywhere
+set formatoptions-=c            " Don't auto-insert comment leader when auto-wrapping
+set formatoptions+=1            " Don't leave hanging 1-letter words
+set formatoptions+=j            " Strip comment leader when joining lines
+set formatoptions+=n            " Recognize lists when formatting
 
 set textwidth=80
 set colorcolumn=81              " Highlight long lines
@@ -23,8 +34,9 @@ set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
 set wildmenu                    " Show keyword list of tab autocomplete
 set wildignore+=*.pyc,env*/**,build/**,node_modules,bower_components,bundle
 
-set statusline=%f\ %m%h%r%w\ %y\ %{fugitive#statusline()}%=\ B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P
-set rulerformat=%45(%=B%3n\ ·\ L%5l/%5L\ ·\ C%7(%c%V%)\ ·\ %4(0x%B%)\ ·\ %P%)
+set ruler
+set statusline=%f\ %m%h%r%w%=\ B%n\ L%l/%L\ C%c%V\ 0x%B\ %P
+set rulerformat=%40(%=%f\ %m%h%r%w\ B%n\ L%l/%L\ C%c%V\ 0x%B\ %P%)
 
 set directory=~/tmp//,/tmp//
 set backupdir=~/tmp//,/tmp//
