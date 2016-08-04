@@ -65,12 +65,6 @@ color base16-default
 
 filetype plugin on
 
-autocmd FileType php set comments=sr:/*,mb:*,ex:*/,://
-autocmd FileType go,javascript,php,python set formatoptions=croqn1
-
-" SCSS is close enough to LESS, which doesn't have default syntax highlighting
-autocmd BufNewFile,BufRead *.less set filetype=scss
-
 " Mappings
 " ==============================================================================
 
