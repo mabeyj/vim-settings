@@ -114,18 +114,6 @@ vnoremap <Leader>= :Tabular equals<CR>
 " Write with sudo
 cnoremap w!! w !sudo tee % > /dev/null
 
-" Chording
-let g:arpeggio_timeoutlen=20
-call arpeggio#load()
-
-Arpeggio noremap ne <Esc>
-Arpeggio inoremap ne <Esc>
-Arpeggio cnoremap ne <C-c>
-
-Arpeggio inoremap ei <Esc>:call UltiSnips#JumpForwards()<CR>
-Arpeggio inoremap st <C-n>
-Arpeggio inoremap rs <C-p>
-
 " Plugin settings
 " ==============================================================================
 
