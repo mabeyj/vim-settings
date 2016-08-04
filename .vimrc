@@ -58,7 +58,7 @@ set guioptions-=m
 
 let base16colorspace=256
 set background=dark
-color base16-default
+color base16-default-dark
 
 " Filetype-specific settings
 " ==============================================================================
