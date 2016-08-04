@@ -117,6 +117,10 @@ Arpeggio inoremap rs <C-p>
 " Plugin settings
 " ==============================================================================
 
+" delimitMate
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_jump_expansion = 1
+
 " Go
 let g:go_fmt_command = "goimports"
 let g:go_highlight_operators = 1
