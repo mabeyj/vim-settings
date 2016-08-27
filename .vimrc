@@ -1,5 +1,4 @@
-" Initialize Pathogen
-call pathogen#infect()
+execute pathogen#infect()
 Helptags
 
 " Basic Vim settings
@@ -7,8 +6,8 @@ Helptags
 
 set incsearch number showcmd
 set autoindent smartindent tabstop=4 shiftwidth=4 shiftround
-set linebreak breakindent showbreak=····
-set listchars=tab:▹—,trail:$,extends:>,precedes:<,eol:¬,nbsp:·
+set showbreak=↪\ \  linebreak breakindent
+set listchars=tab:⇨\ ,trail:$,extends:>,precedes:<,eol:¬,nbsp:·
 set backspace=indent,eol,start
 set spell
 
@@ -28,7 +27,6 @@ set formatoptions+=j            " Strip comment leader when joining lines
 set formatoptions+=n            " Recognize lists when formatting
 
 set textwidth=80
-set colorcolumn=81              " Highlight long lines
 
 set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
 set wildmenu                    " Show keyword list of tab autocomplete
@@ -88,17 +86,6 @@ nnoremap <Leader><Leader> :set spell!<CR>
 
 iabbrev #D <C-r>=strftime("%F %I:%M %p")<CR>
 iabbrev #t <C-r>=strftime("%I:%M %p")<CR>
-
-" Better unmatched bracket mappings
-nnoremap [b [(
-nnoremap ]b ])
-nnoremap [B [{
-nnoremap ]B ]}
-
-nnoremap c[b c[(
-nnoremap c]b c])
-nnoremap c[B c[{
-nnoremap c]B c]}
 
 " Align on =
 nnoremap <Leader>= :Tabular equals<CR>
