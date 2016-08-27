@@ -1,2 +1,5 @@
 .vim/.netrwhist
 .vim/spell
+
+# Workstation-specific snippets.
+.vim/UltiSnips/*/custom.snippets
