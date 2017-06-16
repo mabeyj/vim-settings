@@ -1,6 +1,8 @@
 execute pathogen#infect()
 Helptags
 
+set encoding=utf-8  " For gvim on Windows.
+
 " Basic Vim settings
 " ==============================================================================
 
