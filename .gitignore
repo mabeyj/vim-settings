@@ -1,5 +1,6 @@
-.vim/.netrwhist
+.vim/autoload/pathogen.vim
 .vim/spell
+.vim/.netrwhist
 
 # Workstation-specific snippets.
 .vim/UltiSnips/*/custom.snippets
