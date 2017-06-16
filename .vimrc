@@ -124,8 +124,5 @@ let NERDTreeMouseMode=2
 let NERDTreeQuitOnOpen=1
 let NERDTreeIgnore=['\.pyc$', '^__pycache__$']
 
-" Sparkup
-let g:sparkupNextMapping='<C-B>'     " Prevent conflict with Vim's autocomplete
-
 " UltiSnips
 let g:UltiSnipsNoPythonWarning = 1
