@@ -14,4 +14,5 @@ submodules:
 $(PATHOGEN): submodules/pathogen/autoload/pathogen.vim
 
 $(TARGETS):
+	mkdir --parents $$(dirname $@)
 	cp $^ $@
