@@ -46,7 +46,7 @@ syntax on
 " Gvim options
 " ==============================================================================
 
-set guifont=Liberation\ Mono\ 10
+set guifont=Fantasque\ Sans\ Mono:h14
 set guioptions-=e
 set guioptions-=r
 set guioptions-=T
