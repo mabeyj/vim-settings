@@ -3,4 +3,4 @@ vim-settings
 
 My vim environment.
 
-Run `install.sh` to set up symbolic links in your home directory.
+Run `make` to install. This will overwrite `~/.vimrc`.
