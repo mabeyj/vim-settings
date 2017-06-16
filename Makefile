@@ -11,6 +11,10 @@ install: submodules $(TARGETS)
 submodules:
 	git submodule update --init
 
+.PHONY: update-submodules
+update-submodules:
+	git submodule update --recursive --remote
+
 $(PATHOGEN): submodules/pathogen/autoload/pathogen.vim
 
 $(TARGETS):
