@@ -67,9 +67,6 @@ highlight EndOfBuffer ctermfg=bg guifg=bg
 
 filetype plugin on
 
-" Show diff being committed in a vsplit.
-autocmd FileType gitcommit DiffGitCached | wincmd L | wincmd p
-
 " Mappings
 " ==============================================================================
 
