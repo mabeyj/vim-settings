@@ -34,9 +34,8 @@ set wildmode=list:longest,full  " Make commands/files autocomplete like Bash
 set wildmenu                    " Show keyword list of tab autocomplete
 set wildignore+=*.pyc,env*/**,build/**,node_modules,bower_components,bundle
 
-set ruler
-set statusline=%f\ %m%h%r%w%=\ B%n\ L%l/%L\ C%c%V\ 0x%B\ %P
-set rulerformat=%40(%=%f\ %m%h%r%w\ B%n\ L%l/%L\ C%c%V\ 0x%B\ %P%)
+set laststatus=2                " Always show status line
+set statusline=%f\ %m%h%r%w%q%=\ C%c%V[%02B]\ L%l/%L[%P]
 
 set directory=~/tmp//,/tmp//
 set backupdir=~/tmp//,/tmp//
