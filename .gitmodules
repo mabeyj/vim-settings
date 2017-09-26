@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/matchit"]
 	path = .vim/bundle/matchit
 	url = git@github.com:tmhedberg/matchit.git
+[submodule ".vim/bundle/typescript"]
+	path = .vim/bundle/typescript
+	url = https://github.com/leafgarland/typescript-vim.git
