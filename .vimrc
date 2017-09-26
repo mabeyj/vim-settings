@@ -80,20 +80,12 @@ nnoremap <Leader>x :so %<CR>
 
 nnoremap <Leader>f :NERDTreeToggle<CR>
 nnoremap <Leader>F :NERDTreeMirror<CR>
-nnoremap <Leader>T :TagbarToggle<CR>
-
-nnoremap <Leader>i :IndentGuidesToggle<CR>
-nnoremap <Leader>g :GitGutterToggle<CR>
 
 nnoremap <Leader>l :set list!<CR>
-nnoremap <Leader><Leader> :set spell!<CR>
+nnoremap <Leader>s :set spell!<CR>
 
 iabbrev #D <C-r>=strftime("%F %I:%M %p")<CR>
 iabbrev #t <C-r>=strftime("%I:%M %p")<CR>
-
-" Align on =
-nnoremap <Leader>= :Tabular equals<CR>
-vnoremap <Leader>= :Tabular equals<CR>
 
 " Write with sudo
 cnoremap w!! w !sudo tee % > /dev/null
@@ -120,8 +112,8 @@ let g:indent_guides_guide_size=1
 let g:indent_guides_auto_colors=0
 let g:indent_guides_space_guides=0
 
-hi IndentGuidesOdd ctermbg=234
-hi IndentGuidesEven ctermbg=233
+highlight IndentGuidesOdd ctermbg=234
+highlight IndentGuidesEven ctermbg=233
 
 " NERDTree
 let NERDTreeMouseMode=2
