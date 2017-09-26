@@ -59,6 +59,9 @@ let base16colorspace=256
 set background=dark
 color base16-default-dark
 
+" Hide ~ lines
+highlight EndOfBuffer ctermfg=bg guifg=bg
+
 " Filetype-specific settings
 " ==============================================================================
 
