@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/numbertoggle"]
 	path = .vim/bundle/numbertoggle
 	url = https://github.com/jeffkreeftmeijer/vim-numbertoggle
+[submodule ".vim/bundle/markdown"]
+	path = .vim/bundle/markdown
+	url = https://github.com/gabrielelana/vim-markdown
