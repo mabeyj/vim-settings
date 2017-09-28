@@ -1,11 +1,9 @@
+VIMINIT=~/.vim/init.vim
 VIMRC=~/.vimrc
 PATHOGEN=.vim/autoload/pathogen.vim
-TARGETS=$(PATHOGEN)
 
 .PHONY: install
-install: submodules $(TARGETS)
-	echo "let &runtimepath = printf(\"$(PWD)/.vim,%s\", &runtimepath)" > $(VIMRC)
-	echo "source $(PWD)/.vimrc" >> $(VIMRC)
+install: submodules $(PATHOGEN) $(VIMINIT) $(VIMRC)
 
 .PHONY: submodules
 submodules:
@@ -16,7 +14,13 @@ update-submodules:
 	git submodule update --recursive --remote
 
 $(PATHOGEN): submodules/pathogen/autoload/pathogen.vim
-
-$(TARGETS):
-	mkdir --parents $$(dirname $@)
+	mkdir -p $$(dirname $@)
 	cp $^ $@
+
+$(VIMINIT): Makefile
+	mkdir -p $$(dirname $(VIMINIT))
+	echo "source $(VIMRC)" > $(VIMINIT)
+
+$(VIMRC): Makefile
+	echo "let &runtimepath = printf(\"$(PWD)/.vim,%s\", &runtimepath)" > $(VIMRC)
+	echo "source $(PWD)/.vimrc" >> $(VIMRC)
