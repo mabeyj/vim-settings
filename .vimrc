@@ -6,7 +6,11 @@ set encoding=utf-8  " For gvim on Windows.
 " Basic Vim settings
 " ==============================================================================
 
-set incsearch number showcmd
+" Hybrid line numbers: show exact number for current line and relative line
+" numbers elsewhere.
+set number relativenumber
+
+set incsearch showcmd
 set autoindent smartindent tabstop=4 shiftwidth=4 shiftround
 set showbreak=↪\ \  linebreak breakindent
 set listchars=tab:⇨\ ,trail:$,extends:>,precedes:<,eol:¬,nbsp:·
