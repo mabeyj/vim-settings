@@ -78,7 +78,7 @@ highlight EndOfBuffer ctermfg=bg guifg=bg
 " Filetype-specific settings
 " ==============================================================================
 
-filetype plugin on
+filetype indent plugin on
 
 " Mappings
 " ==============================================================================
