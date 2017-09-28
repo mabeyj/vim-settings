@@ -1,10 +1,16 @@
+" Plugins
+" ==============================================================================
+
+packadd! matchit
+
 execute pathogen#infect()
 Helptags
 
-set encoding=utf-8  " For gvim on Windows.
-
 " Basic Vim settings
 " ==============================================================================
+
+" Encoding: explicity set for gvim on Windows.
+set encoding=utf-8
 
 " Hybrid line numbers: show exact number for current line and relative line
 " numbers elsewhere.
