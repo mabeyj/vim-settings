@@ -10,7 +10,10 @@ set encoding=utf-8  " For gvim on Windows.
 " numbers elsewhere.
 set number relativenumber
 
-set incsearch showcmd
+" Search: use incremental search and highlight all matches.
+set incsearch hlsearch
+
+set showcmd
 set autoindent smartindent tabstop=4 shiftwidth=4 shiftround
 set showbreak=↪\ \  linebreak breakindent
 set listchars=tab:⇨\ ,trail:$,extends:>,precedes:<,eol:¬,nbsp:·
@@ -75,6 +78,9 @@ filetype plugin on
 " ==============================================================================
 
 set pastetoggle=<Leader>p
+
+" \\ to clear current search highlight.
+nnoremap <Leader><Leader> :nohlsearch<CR>
 
 nnoremap <Leader>z :sp ~/.vimrc<CR>
 nnoremap <Leader>x :so %<CR>
