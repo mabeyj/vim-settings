@@ -48,7 +48,9 @@ set wildmenu                    " Show keyword list of tab autocomplete
 set wildignore+=*.pyc,env*,build,bundle,bower_components,node_modules,vendor
 
 set laststatus=2                " Always show status line
-set statusline=%f\ %m%h%r%w%q%=\ C%c%V[%02B]\ L%l/%L[%P]
+set statusline=%f\ %m%h%r%w%q
+set statusline+=%#goStatuslineColor#%{go#statusline#Show()}%*
+set statusline+=%=\ C%c%V[%02B]\ L%l/%L[%P]
 
 set directory=~/tmp//,/tmp//
 set backupdir=~/tmp//,/tmp//
