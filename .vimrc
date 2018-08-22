@@ -74,8 +74,9 @@ let base16colorspace=256
 set background=dark
 color base16-default-dark
 
-" base16 uses undercurl style which isn't supported by mintty.
-highlight SpellBad cterm=underline
+" Change base16 spelling colour. Default also uses undercurl which isn't
+" supported by mintty.
+highlight SpellBad cterm=underline ctermfg=9 ctermbg=none
 
 " Hide ~ lines
 highlight EndOfBuffer ctermfg=bg guifg=bg
