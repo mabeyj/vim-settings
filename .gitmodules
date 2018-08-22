@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/prettier"]
 	path = .vim/bundle/prettier
 	url = https://github.com/prettier/vim-prettier.git
+[submodule ".vim/bundle/tsx"]
+	path = .vim/bundle/tsx
+	url = https://github.com/ianks/vim-tsx.git
