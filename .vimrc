@@ -115,6 +115,9 @@ cnoremap w!! w !sudo tee % > /dev/null
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_jump_expansion = 1
 
+" GitGutter
+autocmd BufWritePost * GitGutter
+
 " Go
 let g:go_fmt_command = "goimports"
 let g:go_metalinter_autosave = 1
