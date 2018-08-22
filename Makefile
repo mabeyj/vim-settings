@@ -22,5 +22,5 @@ $(VIMINIT): Makefile
 	echo "source $(VIMRC)" > $(VIMINIT)
 
 $(VIMRC): Makefile
-	echo "let &runtimepath = printf(\"$(PWD)/.vim,%s\", &runtimepath)" > $(VIMRC)
+	echo "let &runtimepath = printf(\"$(PWD)/.vim,%s,$(PWD)/.vim/after\", &runtimepath)" > $(VIMRC)
 	echo "source $(PWD)/.vimrc" >> $(VIMRC)
