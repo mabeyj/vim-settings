@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/markdown"]
 	path = .vim/bundle/markdown
 	url = https://github.com/gabrielelana/vim-markdown
+[submodule ".vim/bundle/prettier"]
+	path = .vim/bundle/prettier
+	url = https://github.com/prettier/vim-prettier.git
