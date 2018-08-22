@@ -94,9 +94,6 @@ set pastetoggle=<Leader>p
 " \\ to clear current search highlight.
 nnoremap <Leader><Leader> :nohlsearch<CR>
 
-nnoremap <Leader>z :sp ~/.vimrc<CR>
-nnoremap <Leader>x :so %<CR>
-
 nnoremap <Leader>f :NERDTreeToggle<CR>
 nnoremap <Leader>F :NERDTreeMirror<CR>
 
