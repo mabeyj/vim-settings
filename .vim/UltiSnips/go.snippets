@@ -87,6 +87,48 @@ func Test$1(t *testing.T) {
 }
 endsnippet
 
+snippet ti "Test if assertion" b
+if $1 {
+	t.Errorf("got ${2:%s}; want $2", ${3:got}, ${4:want})
+}
+endsnippet
+
+snippet tt "Table-driven test struct array" b
+var ${1:name}Tests = []struct {
+	$2
+}{
+	{$3},
+}
+endsnippet
+
+snippet ttfn "Table-driven test function" b
+func Test${1:Function}(t *testing.T) {
+	for _, tt := range ${2:tests} {
+		t.Run(${3:tt.name}, func(t *testing.T) {
+			$4
+		})
+	}
+}
+endsnippet
+
+snippet tteb "Table-driven test error boolean switch assertion" b
+switch {
+case err == nil && tt.err:
+	t.Error("want error")
+case err != nil && !tt.err:
+	t.Error("got error:", err)
+}
+endsnippet
+
+snippet ttes "Table-driven test error string switch assertion" b
+switch {
+case err == nil && tt.err != "":
+	t.Error("want error:", tt.err)
+case err != nil && tt.err != err.Error():
+	t.Errorf("got error %q; want %q", err, tt.err)
+}
+endsnippet
+
 snippet c "Convey block" b
 Convey("$1", func() {
 	$2
