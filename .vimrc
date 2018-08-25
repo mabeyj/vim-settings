@@ -80,6 +80,7 @@ color base16-default-dark
 " Change base16 spelling colour. Default also uses undercurl which isn't
 " supported by mintty.
 highlight SpellBad cterm=underline ctermfg=9 ctermbg=none
+highlight SpellCap cterm=underline ctermfg=12 ctermbg=none
 
 " Hide ~ lines
 highlight EndOfBuffer ctermfg=bg guifg=bg
