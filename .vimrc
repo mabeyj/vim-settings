@@ -90,6 +90,9 @@ highlight EndOfBuffer ctermfg=bg guifg=bg
 
 filetype indent plugin on
 
+" Python
+let g:python_recommended_style = 0
+
 " Mappings
 " ==============================================================================
 
