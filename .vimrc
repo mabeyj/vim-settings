@@ -9,6 +9,9 @@ Helptags
 " Basic Vim settings
 " ==============================================================================
 
+" Update time: shorten for quicker GitGutter updates.
+set updatetime=250
+
 " Encoding: explicity set for gvim on Windows.
 set encoding=utf-8
 
@@ -112,9 +115,6 @@ cnoremap w!! w !sudo tee % > /dev/null
 " delimitMate
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_jump_expansion = 1
-
-" GitGutter
-autocmd BufWritePost * GitGutter
 
 " Go
 let g:go_fmt_command = "goimports"
