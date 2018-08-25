@@ -93,6 +93,9 @@ filetype indent plugin on
 " Python
 let g:python_recommended_style = 0
 
+" YAML
+autocmd Filetype yaml setlocal tabstop=2 shiftwidth=2 expandtab
+
 " Mappings
 " ==============================================================================
 
