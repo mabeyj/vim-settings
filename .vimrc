@@ -104,6 +104,14 @@ set pastetoggle=<Leader>p
 " \\ to clear current search highlight.
 nnoremap <Leader><Leader> :nohlsearch<CR>
 
+" Clear search highlight when entering insert mode.
+nnoremap A :nohlsearch<CR>A
+nnoremap a :nohlsearch<CR>a
+nnoremap I :nohlsearch<CR>I
+nnoremap i :nohlsearch<CR>i
+nnoremap O :nohlsearch<CR>O
+nnoremap o :nohlsearch<CR>o
+
 nnoremap <Leader>f :NERDTreeToggle<CR>
 nnoremap <Leader>F :NERDTreeMirror<CR>
 
