@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/tsx"]
 	path = .vim/bundle/tsx
 	url = https://github.com/ianks/vim-tsx.git
+[submodule ".vim/bundle/neoformat"]
+	path = .vim/bundle/neoformat
+	url = https://github.com/sbdchd/neoformat.git
