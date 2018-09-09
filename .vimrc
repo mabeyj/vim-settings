@@ -90,6 +90,12 @@ highlight EndOfBuffer ctermfg=bg guifg=bg
 
 filetype indent plugin on
 
+" Run Neoformat on save.
+augroup neoformat
+	autocmd!
+	autocmd BufWritePre *.js,*.jsx,*.json,*.md,*.ts,*.tsx,*.yaml,*.yml Neoformat
+augroup END
+
 " Python
 let g:python_recommended_style = 0
 
@@ -148,6 +154,9 @@ let g:indent_guides_space_guides=0
 
 highlight IndentGuidesOdd ctermbg=234
 highlight IndentGuidesEven ctermbg=233
+
+" Neoformat
+let g:neoformat_run_all_formatters = 1
 
 " NERDTree
 let NERDTreeMouseMode=2
