@@ -10,7 +10,7 @@ Helptags
 " ==============================================================================
 
 " Update time: shorten for quicker GitGutter updates.
-set updatetime=1000
+set updatetime=100
 
 " Encoding: explicity set for gvim on Windows.
 set encoding=utf-8
