@@ -22,6 +22,9 @@ set number relativenumber
 " Search: use incremental search and highlight all matches.
 set incsearch hlsearch
 
+" Clipboard: don't automatically copy when selecting in visual mode.
+set clipboard-=autoselect
+
 set showcmd
 set autoindent smartindent tabstop=4 shiftwidth=4 shiftround
 set showbreak=↪\ \  linebreak breakindent
