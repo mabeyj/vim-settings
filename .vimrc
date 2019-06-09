@@ -93,7 +93,7 @@ filetype indent plugin on
 " Run Neoformat on save.
 augroup neoformat
 	autocmd!
-	autocmd BufWritePre *.js,*.jsx,*.json,*.md,*.ts,*.tsx,*.yaml,*.yml Neoformat
+	autocmd BufWritePre *.js,*.jsx,*.json,*.md,*.scss,*.ts,*.tsx,*.yaml,*.yml Neoformat
 augroup END
 
 " Python
